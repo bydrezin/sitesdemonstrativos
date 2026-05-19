@@ -1,1 +1,607 @@
-<h1>O meu site Demo Pet</h1>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreativzPet | O Melhor para o Seu Pet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Quicksand', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#00AEEF',
+                        secondary: '#0B1B3F',
+                        lightbg: '#F2F4F7',
+                        peachbg: '#E0F4FC', // Light blue background replacing the old peach/pink
+                        dark: '#0B1B3F',
+                        gray: '#6B7280',
+                    },
+                    boxShadow: {
+                        'card': '0 4px 20px rgba(0,0,0,0.05)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Quicksand', sans-serif; color: #6B7280; background-color: #F2F4F7; }
+        h1, h2, h3, h4, h5, h6 { color: #0B1B3F; font-weight: 700; }
+        .placeholder-img { background-color: #e2e8f0; display: flex; align-items: center; justify-content: center; color: #94a3b8; font-weight: 700; text-align: center; }
+        /* Hide scrollbar for horizontal scrolling containers */
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden bg-lightbg">
+
+    <!-- Topbar -->
+    <div class="bg-primary text-white text-xs py-2 hidden md:block">
+        <div class="container max-w-6xl mx-auto px-4 lg:px-8 flex justify-between items-center">
+            <div class="flex items-center gap-6">
+                <div class="flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg> São Paulo, SP</div>
+                <div class="flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg> contato@creativzpet.com.br</div>
+            </div>
+            <div class="font-semibold text-center tracking-wide">FRETE GRÁTIS EM PEDIDOS ACIMA DE R$ 150!</div>
+            <div class="flex items-center gap-4">
+                <span class="cursor-pointer hover:text-secondary transition">R$ BRL</span>
+                <span class="cursor-pointer hover:text-secondary transition">PT-BR</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header class="w-full bg-white shadow-sm sticky top-0 z-50 py-3">
+        <div class="container max-w-6xl mx-auto px-4 lg:px-8 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="flex items-center">
+                <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779170697/Logo-_-Icon-Creativzlab-_For-LigthBG__zl2sl6.webp" alt="CreativzPet Logo" class="h-6 md:h-7 w-auto object-contain drop-shadow-sm">
+            </a>
+
+            <!-- Search Bar (Desktop) -->
+            <div class="hidden lg:flex flex-1 max-w-sm mx-6 relative">
+                <input type="text" placeholder="Buscar produtos..." class="w-full bg-lightbg rounded-full py-2.5 pl-6 pr-12 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20">
+                <button class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 hover:text-primary"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
+            </div>
+
+            <!-- Navigation (Desktop) -->
+            <nav class="hidden md:flex space-x-5 font-bold text-secondary text-sm">
+                <a href="#" class="text-primary transition-colors">Início</a>
+                <a href="#loja" class="hover:text-primary transition-colors">Loja</a>
+                <a href="#categorias" class="hover:text-primary transition-colors">Categorias</a>
+                <a href="#blog" class="hover:text-primary transition-colors">Blog</a>
+                <a href="#contato" class="hover:text-primary transition-colors">Contato</a>
+            </nav>
+
+            <!-- Icons -->
+            <div class="flex items-center gap-4 lg:ml-6">
+                <a href="#" class="text-secondary hover:text-primary transition-colors hidden sm:block"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg></a>
+                <a href="#" class="text-secondary hover:text-primary transition-colors relative">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    <span class="absolute -top-2 -right-2 bg-secondary text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center">2</span>
+                </a>
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="md:hidden text-secondary focus:outline-none ml-2">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 p-4 absolute w-full shadow-lg">
+            <div class="flex flex-col space-y-4 font-bold text-secondary text-center">
+                <a href="#" class="text-primary py-2">Início</a>
+                <a href="#loja" class="hover:text-primary py-2">Loja</a>
+                <a href="#categorias" class="hover:text-primary py-2">Categorias</a>
+                <a href="#blog" class="hover:text-primary py-2">Blog</a>
+                <a href="#contato" class="hover:text-primary py-2">Contato</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-lightbg pt-8 pb-20 lg:pt-12 lg:pb-24 overflow-hidden">
+        <div class="container max-w-6xl mx-auto px-4 lg:px-8 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center">
+                <!-- Text Content -->
+                <div class="w-full lg:w-1/2 text-center lg:text-left mb-10 lg:mb-0">
+                    <span class="text-primary font-bold text-sm tracking-widest uppercase mb-3 block">Novidade Exclusiva</span>
+                    <h1 class="text-5xl lg:text-6xl font-extrabold text-secondary leading-tight mb-5">
+                        A Melhor Ração <br> Para o Seu Cão
+                    </h1>
+                    <p class="text-gray text-lg mb-6 max-w-md mx-auto lg:mx-0">
+                        Garanta a saúde e felicidade do seu melhor amigo com nossos produtos orgânicos selecionados de alta qualidade.
+                    </p>
+                    <a href="#loja" class="inline-flex items-center justify-center px-8 py-3 bg-primary text-white rounded-full font-bold text-lg hover:bg-secondary transition-colors shadow-lg group">
+                        Comprar Agora
+                        <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                </div>
+                
+                <!-- Hero Image Area -->
+                <div class="w-full lg:w-1/2 relative flex justify-center items-center mt-6 lg:mt-0">
+                    <!-- Moldura Abstrata Gradiente (Meio Quadrada, Meio Arredondada) -->
+                    <div class="absolute w-[280px] h-[280px] sm:w-[420px] sm:h-[420px] bg-gradient-to-br from-primary via-[#B3E9F8] to-[#E0F4FC] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -z-10 shadow-lg" style="border-radius: 61% 39% 70% 30% / 46% 59% 41% 54%;"></div>
+                    
+
+                    
+                    <!-- Pata 1 (Top Left - Foreground) - Ajustada -->
+                    <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779165063/patas_jtnhor.webp" alt="Pata Superior Foreground" class="absolute -top-6 left-8 sm:left-16 w-14 sm:w-20 z-40 rotate-[15deg] drop-shadow-xl">
+                    
+                    <!-- Pata 3 (Middle Left - Nova Menor) - Adicionada -->
+                    <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779165063/patas_jtnhor.webp" alt="Patinha Menor" class="absolute top-1/2 left-4 sm:left-16 w-10 sm:w-16 z-30 blur-[1px] opacity-90 rotate-[-10deg]">
+
+                    <!-- Imagem Principal (Cachorro na Banheira) -->
+                    <div id="hero-img-main" class="w-full max-w-[420px] relative z-10 drop-shadow-2xl">
+                        <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779165058/Cachorro-na-banheira_u5s9nz.webp" alt="Cachorro Feliz na Banheira" class="w-full h-auto object-contain scale-110 md:scale-105 origin-bottom">
+                    </div>
+                    
+                    <!-- Pata 2 (Bottom Right - Foreground) - Aproximada -->
+                    <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779165063/patas_jtnhor.webp" alt="Patas Foreground" class="absolute -bottom-2 right-8 sm:right-16 w-28 sm:w-36 z-40 blur-[4px] rotate-[-25deg] drop-shadow-2xl scale-110">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Wave Divider Bottom -->
+        <div class="absolute bottom-[-2px] left-0 w-full overflow-hidden leading-none z-20">
+            <svg class="w-full h-8 md:h-16 text-white drop-shadow-md" fill="currentColor" preserveAspectRatio="none" viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,96L80,85.3C160,75,320,53,480,58.7C640,64,800,96,960,96C1120,96,1280,64,1360,48L1440,32L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z" opacity="0.3"></path>
+                <path d="M0,32L80,48C160,64,320,96,480,96C640,96,800,64,960,53.3C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z" opacity="0.6"></path>
+                <path d="M0,64L80,58.7C160,53,320,43,480,53.3C640,64,800,96,960,96C1120,96,1280,64,1360,48L1440,32L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Banners Section -->
+    <section class="py-8 bg-white relative z-10">
+        <div class="container max-w-6xl mx-auto px-4 lg:px-8">
+            <!-- Small Best Selling Banners (Top Row) -->
+            <div class="flex items-center gap-4 mb-6">
+                <div class="bg-secondary text-white px-4 py-2 rounded-lg font-bold text-sm whitespace-nowrap hidden md:block">
+                    Produtos Mais Vendidos
+                </div>
+                <div class="flex overflow-x-auto hide-scrollbar gap-4 w-full pt-4 pb-2">
+                    <!-- Banner Mini 1 -->
+                    <div class="flex items-center gap-3 min-w-[190px] group cursor-pointer">
+                        <div class="w-14 h-14 bg-gradient-to-br from-secondary to-primary relative overflow-visible shrink-0 shadow-sm flex items-end justify-center" style="border-radius: 61% 39% 70% 30% / 46% 59% 41% 54%;">
+                            <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779170307/dogdogdog3_qcuubo.webp" alt="Ração Canina" class="absolute bottom-0 h-[100%] w-auto object-contain z-10 drop-shadow-md group-hover:scale-110 transition-transform origin-bottom">
+                        </div>
+                        <div>
+                            <h4 class="text-secondary font-bold text-xs leading-tight group-hover:text-primary transition-colors">Ração Canina Premium</h4>
+                            <a href="#" class="text-[10px] text-primary font-bold hover:underline">Comprar &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Banner Mini 2 -->
+                    <div class="flex items-center gap-3 min-w-[190px] group cursor-pointer">
+                        <div class="w-14 h-14 bg-gradient-to-br from-secondary to-primary relative overflow-visible shrink-0 shadow-sm flex items-end justify-center" style="border-radius: 61% 39% 70% 30% / 46% 59% 41% 54%;">
+                            <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779170309/dogdog2_xipfoa.webp" alt="Suplemento Pet" class="absolute bottom-0 h-[100%] w-auto object-contain z-10 drop-shadow-md group-hover:scale-110 transition-transform origin-bottom">
+                        </div>
+                        <div>
+                            <h4 class="text-secondary font-bold text-xs leading-tight group-hover:text-primary transition-colors">Suplemento Pet</h4>
+                            <a href="#" class="text-[10px] text-primary font-bold hover:underline">Comprar &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Banner Mini 3 -->
+                    <div class="flex items-center gap-3 min-w-[190px] group cursor-pointer">
+                        <div class="w-14 h-14 bg-gradient-to-br from-secondary to-primary relative overflow-visible shrink-0 shadow-sm flex items-end justify-center" style="border-radius: 61% 39% 70% 30% / 46% 59% 41% 54%;">
+                            <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779170310/dogdogdogdog4_ikg6hw.webp" alt="Snacks Saudáveis" class="absolute bottom-0 h-[100%] w-auto object-contain z-10 drop-shadow-md group-hover:scale-110 transition-transform origin-bottom">
+                        </div>
+                        <div>
+                            <h4 class="text-secondary font-bold text-xs leading-tight group-hover:text-primary transition-colors">Snacks Saudáveis</h4>
+                            <a href="#" class="text-[10px] text-primary font-bold hover:underline">Comprar &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Banner Mini 4 -->
+                    <div class="flex items-center gap-3 min-w-[190px] group cursor-pointer">
+                        <div class="w-14 h-14 bg-gradient-to-br from-secondary to-primary relative overflow-visible shrink-0 shadow-sm flex items-end justify-center" style="border-radius: 61% 39% 70% 30% / 46% 59% 41% 54%;">
+                            <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779170311/dog1_xawumw.webp" alt="Petiscos Naturais" class="absolute bottom-0 h-[100%] w-auto object-contain z-10 drop-shadow-md group-hover:scale-110 transition-transform origin-bottom">
+                        </div>
+                        <div>
+                            <h4 class="text-secondary font-bold text-xs leading-tight group-hover:text-primary transition-colors">Petiscos Naturais</h4>
+                            <a href="#" class="text-[10px] text-primary font-bold hover:underline">Comprar &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Large Banners Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- Banner 1 -->
+                <div class="bg-gradient-to-br from-[#E0F4FC] to-[#B3E9F8] rounded-2xl p-5 relative overflow-hidden group h-44 flex items-center">
+                    <div class="relative z-10 w-2/3">
+                        <div class="bg-primary text-white font-bold text-[10px] inline-block px-2.5 py-1 rounded-full mb-2">50% OFF</div>
+                        <h3 class="text-lg text-secondary font-bold mb-2 leading-tight">Comida & Acessórios Pet</h3>
+                        <a href="#" class="text-white bg-secondary/90 hover:bg-secondary px-3 py-1.5 rounded-full text-[10px] font-bold inline-block mt-1 transition">Comprar Agora</a>
+                    </div>
+                    <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779166470/gato-esfomeado_juzklz.webp" alt="Gato Esfomeado" class="absolute right-0 top-0 h-full w-auto object-contain z-0 group-hover:scale-105 transition-transform origin-top-right">
+                </div>
+                
+                <!-- Banner 2 -->
+                <div class="bg-secondary rounded-2xl p-5 relative overflow-hidden group h-44 flex items-center">
+                    <div class="relative z-10 w-2/3">
+                        <p class="text-white/80 text-[10px] font-bold uppercase tracking-wider mb-1">Oferta do Dia</p>
+                        <h3 class="text-primary text-2xl font-extrabold mb-1">30%</h3>
+                        <p class="text-white text-xs font-bold mb-2">Desconto Hoje</p>
+                        <a href="#" class="text-secondary bg-white hover:bg-lightbg px-3 py-1.5 rounded-full text-[10px] font-bold inline-block transition">Comprar Agora</a>
+                    </div>
+                    <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779166996/babyboomeer_zcehf8.webp" alt="Cachorro de Oferta" class="absolute right-2 bottom-0 h-[90%] w-auto object-contain z-0 group-hover:scale-105 transition-transform origin-bottom-right">
+                </div>
+
+                <!-- Banner 3 -->
+                <div class="bg-gradient-to-bl from-[#B3E9F8] to-[#E0F4FC] rounded-2xl p-5 relative overflow-hidden group col-span-1 md:col-span-2 lg:col-span-1 h-44 flex items-center">
+                    <div class="relative z-10 w-2/3">
+                        <h3 class="text-secondary text-xl font-bold mb-1 leading-tight">Ração<br>para<br>Pássaros</h3>
+                        <p class="text-secondary/80 text-xs mb-3">Mistura Premium</p>
+                    </div>
+                    <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779167767/parrotinhos_nik2vl.webp" alt="Pássaros de Oferta" class="absolute right-0 bottom-0 h-[85%] w-auto object-contain z-0 group-hover:scale-105 transition-transform origin-bottom-right">
+                </div>
+
+                <!-- Banner 4 -->
+                <div class="bg-primary rounded-2xl p-5 relative overflow-hidden group col-span-1 md:col-span-2 lg:col-span-1 h-44 flex items-center">
+                    <div class="relative z-10 w-1/2 text-white">
+                        <p class="text-white/80 text-[10px] font-bold uppercase tracking-wider mb-1">Para Cães</p>
+                        <h3 class="text-2xl font-extrabold mb-1">25%</h3>
+                        <p class="text-xs font-bold mb-3">Na Loja Toda</p>
+                    </div>
+                    <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779168905/cachorrinhomordedor_1_fh0dau.webp" alt="Cachorrinhos Mordedor" class="absolute -right-2 bottom-0 h-[72%] w-auto object-contain z-0 group-hover:scale-105 transition-transform origin-bottom-right">
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Wave Separator (Top of Categories) -->
+    <div class="w-full overflow-hidden leading-none z-20 relative -mb-[1px]">
+        <svg class="w-full h-8 md:h-12 text-peachbg" fill="currentColor" preserveAspectRatio="none" viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,96L80,85.3C160,75,320,53,480,58.7C640,64,800,96,960,96C1120,96,1280,64,1360,48L1440,32L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z" opacity="0.3"></path>
+            <path d="M0,32L80,48C160,64,320,96,480,96C640,96,800,64,960,53.3C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z" opacity="0.6"></path>
+            <path d="M0,64L80,58.7C160,53,320,43,480,53.3C640,64,800,96,960,96C1120,96,1280,64,1360,48L1440,32L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path>
+        </svg>
+    </div>
+
+    <!-- Browse By Categories -->
+    <section id="categorias" class="relative bg-gradient-to-b from-[#E0F4FC] to-[#B3E9F8] pt-6 pb-10">
+        <div class="container max-w-6xl mx-auto px-4 lg:px-8">
+            <h2 class="text-xl md:text-2xl font-extrabold text-secondary mb-6 flex items-center justify-between">
+                <span>Navegue por Categorias <span class="text-primary text-xl">🐾</span></span>
+                <div class="hidden sm:flex gap-2">
+                    <button class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-gray hover:bg-secondary hover:text-white transition shadow-sm"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg></button>
+                    <button class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-gray hover:bg-secondary hover:text-white transition shadow-sm"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></button>
+                </div>
+            </h2>
+
+            <!-- Categories Icons -->
+            <div class="flex overflow-x-auto hide-scrollbar justify-between gap-3 mb-8 pb-2">
+                <a href="#" class="flex flex-col items-center group">
+                    <div id="cat-icon-1" class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-all group-hover:-translate-y-1 group-hover:border-2 border-primary placeholder-img"><span class="text-[8px]">Cachorro</span></div>
+                    <span class="mt-2 font-bold text-secondary text-xs group-hover:text-primary transition">Cachorro</span>
+                </a>
+                <a href="#" class="flex flex-col items-center group">
+                    <div id="cat-icon-2" class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-all group-hover:-translate-y-1 group-hover:border-2 border-primary placeholder-img"><span class="text-[8px]">Farmácia</span></div>
+                    <span class="mt-2 font-bold text-secondary text-xs group-hover:text-primary transition">Farmácia</span>
+                </a>
+                <a href="#" class="flex flex-col items-center group">
+                    <div id="cat-icon-3" class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-all group-hover:-translate-y-1 group-hover:border-2 border-primary placeholder-img"><span class="text-[8px]">Brinquedo</span></div>
+                    <span class="mt-2 font-bold text-secondary text-xs group-hover:text-primary transition">Brinquedo</span>
+                </a>
+                <a href="#" class="flex flex-col items-center group">
+                    <div id="cat-icon-4" class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-all group-hover:-translate-y-1 group-hover:border-2 border-primary placeholder-img"><span class="text-[8px]">Gato</span></div>
+                    <span class="mt-2 font-bold text-secondary text-xs group-hover:text-primary transition">Gato</span>
+                </a>
+                <a href="#" class="flex flex-col items-center group">
+                    <div id="cat-icon-5" class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-all group-hover:-translate-y-1 group-hover:border-2 border-primary placeholder-img"><span class="text-[8px]">Pássaro</span></div>
+                    <span class="mt-2 font-bold text-secondary text-xs group-hover:text-primary transition">Pássaro</span>
+                </a>
+                <a href="#" class="flex flex-col items-center group">
+                    <div id="cat-icon-6" class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-all group-hover:-translate-y-1 group-hover:border-2 border-primary placeholder-img"><span class="text-[8px]">Exótico</span></div>
+                    <span class="mt-2 font-bold text-secondary text-xs group-hover:text-primary transition">Exótico</span>
+                </a>
+            </div>
+
+            <!-- Big Discount Banner inside Categories -->
+            <div class="bg-secondary rounded-xl px-8 py-8 relative overflow-visible flex flex-col md:flex-row items-center justify-between shadow-md mt-20">
+                <div class="relative z-20 w-full md:w-1/2 text-white text-center md:text-left">
+                    <p class="text-primary font-bold uppercase tracking-wider mb-1 text-[10px]">Promoção de Pets</p>
+                    <h3 class="text-2xl md:text-3xl font-extrabold mb-3 text-white">Economize 50% OFF</h3>
+                    <a href="#" class="inline-block bg-primary text-white font-bold py-2 px-5 rounded-full text-xs hover:bg-white hover:text-secondary transition-colors shadow-lg">Comprar Agora</a>
+                </div>
+                <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779170827/h1-banner6_ge2rxw.png" alt="Promoção Cão e Gato" class="absolute right-6 md:right-12 lg:right-16 bottom-0 h-[115%] md:h-[130%] w-auto object-contain z-10 origin-bottom pointer-events-none drop-shadow-xl hidden md:block">
+                <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779170827/h1-banner6_ge2rxw.png" alt="Promoção Cão e Gato Mobile" class="relative mt-6 h-28 w-auto object-contain z-10 block md:hidden drop-shadow-xl mx-auto">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Wave Separator (Bottom of Categories) -->
+    <div class="w-full overflow-hidden leading-none z-20 relative -mt-[1px]">
+        <svg class="w-full h-8 md:h-12 text-[#B3E9F8]" fill="currentColor" preserveAspectRatio="none" viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,96L80,85.3C160,75,320,53,480,58.7C640,64,800,96,960,96C1120,96,1280,64,1360,48L1440,32L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z" opacity="0.3"></path>
+            <path d="M0,32L80,48C160,64,320,96,480,96C640,96,800,64,960,53.3C1120,43,1280,53,1360,58.7L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z" opacity="0.6"></path>
+            <path d="M0,64L80,58.7C160,53,320,43,480,53.3C640,64,800,96,960,96C1120,96,1280,64,1360,48L1440,32L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+        </svg>
+    </div>
+
+    <!-- Best Seller Products -->
+    <section class="py-8 bg-white relative z-10">
+        <div class="container max-w-6xl mx-auto px-4 lg:px-8">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-xl md:text-2xl font-extrabold text-secondary flex items-center gap-2">Produtos Mais Vendidos <span class="text-primary text-xl">🐾</span></h2>
+                <a href="#" class="text-xs font-bold text-gray hover:text-primary transition">Ver todos &rarr;</a>
+            </div>
+
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- P1 -->
+                <div class="bg-white group relative">
+                    <div class="relative border border-gray-100 rounded-xl p-3 mb-2 h-40 flex items-center justify-center">
+                        <span class="absolute top-2 left-2 bg-secondary text-white text-[9px] font-bold px-1.5 py-0.5 rounded">Venda</span>
+                        <div id="bs-1" class="w-full h-full placeholder-img bg-transparent"><span class="text-[10px]">Img</span></div>
+                    </div>
+                    <div class="text-primary font-bold text-xs mb-0.5">R$ 119,90 <span class="text-gray text-[10px] line-through font-normal">R$ 140,00</span></div>
+                    <h3 class="text-secondary font-bold text-xs hover:text-primary transition cursor-pointer">Suplemento Cães Sênior</h3>
+                    <div class="flex text-yellow-400 mt-1 text-[9px]">★★★★★ <span class="text-gray ml-1">(5)</span></div>
+                </div>
+                <!-- P2 -->
+                <div class="bg-white group relative">
+                    <div class="relative border border-gray-100 rounded-xl p-3 mb-2 h-40 flex items-center justify-center">
+                        <div id="bs-2" class="w-full h-full placeholder-img bg-transparent"><span class="text-[10px]">Img</span></div>
+                    </div>
+                    <div class="text-primary font-bold text-xs mb-0.5">R$ 54,90</div>
+                    <h3 class="text-secondary font-bold text-xs hover:text-primary transition cursor-pointer">Antipulgas 10-20kg</h3>
+                    <div class="flex text-yellow-400 mt-1 text-[9px]">★★★★☆ <span class="text-gray ml-1">(3)</span></div>
+                </div>
+                <!-- P3 -->
+                <div class="bg-white group relative">
+                    <div class="relative border border-gray-100 rounded-xl p-3 mb-2 h-40 flex items-center justify-center">
+                        <span class="absolute top-2 left-2 bg-green-500 text-white text-[9px] font-bold px-1.5 py-0.5 rounded">Novo</span>
+                        <div id="bs-3" class="w-full h-full placeholder-img bg-transparent"><span class="text-[10px]">Img</span></div>
+                    </div>
+                    <div class="text-primary font-bold text-xs mb-0.5">R$ 22,50</div>
+                    <h3 class="text-secondary font-bold text-xs hover:text-primary transition cursor-pointer">Ração Peixes Tropicais</h3>
+                    <div class="flex text-yellow-400 mt-1 text-[9px]">★★★★★ <span class="text-gray ml-1">(12)</span></div>
+                </div>
+                <!-- P4 -->
+                <div class="bg-white group relative">
+                    <div class="relative border border-gray-100 rounded-xl p-3 mb-2 h-40 flex items-center justify-center">
+                        <span class="absolute top-2 left-2 bg-primary text-white text-[9px] font-bold px-1.5 py-0.5 rounded">Quente</span>
+                        <div id="bs-4" class="w-full h-full placeholder-img bg-transparent"><span class="text-[10px]">Img</span></div>
+                    </div>
+                    <div class="text-primary font-bold text-xs mb-0.5">R$ 39,90</div>
+                    <h3 class="text-secondary font-bold text-xs hover:text-primary transition cursor-pointer">Areia Biodegradável 4kg</h3>
+                    <div class="flex text-yellow-400 mt-1 text-[9px]">★★★★★ <span class="text-gray ml-1">(8)</span></div>
+                </div>
+                <!-- P5 -->
+                <div class="bg-white group relative">
+                    <div class="relative border border-gray-100 rounded-xl p-3 mb-2 h-40 flex items-center justify-center">
+                        <span class="absolute top-2 left-2 bg-secondary text-white text-[9px] font-bold px-1.5 py-0.5 rounded">Venda</span>
+                        <div id="bs-5" class="w-full h-full placeholder-img bg-transparent"><span class="text-[10px]">Img</span></div>
+                    </div>
+                    <div class="text-primary font-bold text-xs mb-0.5">R$ 89,90 <span class="text-gray text-[10px] line-through font-normal">R$ 110,00</span></div>
+                    <h3 class="text-secondary font-bold text-xs hover:text-primary transition cursor-pointer">Coleira Peitoral Refletiva</h3>
+                    <div class="flex text-yellow-400 mt-1 text-[9px]">★★★★☆ <span class="text-gray ml-1">(15)</span></div>
+                </div>
+                <!-- P6 -->
+                <div class="bg-white group relative">
+                    <div class="relative border border-gray-100 rounded-xl p-3 mb-2 h-40 flex items-center justify-center">
+                        <div id="bs-6" class="w-full h-full placeholder-img bg-transparent"><span class="text-[10px]">Img</span></div>
+                    </div>
+                    <div class="text-primary font-bold text-xs mb-0.5">R$ 45,00</div>
+                    <h3 class="text-secondary font-bold text-xs hover:text-primary transition cursor-pointer">Moletom Inverno Pet</h3>
+                    <div class="flex text-yellow-400 mt-1 text-[9px]">★★★★★ <span class="text-gray ml-1">(4)</span></div>
+                </div>
+                <!-- P7 -->
+                <div class="bg-white group relative">
+                    <div class="relative border border-gray-100 rounded-xl p-3 mb-2 h-40 flex items-center justify-center">
+                        <span class="absolute top-2 left-2 bg-primary text-white text-[9px] font-bold px-1.5 py-0.5 rounded">Quente</span>
+                        <div id="bs-7" class="w-full h-full placeholder-img bg-transparent"><span class="text-[10px]">Img</span></div>
+                    </div>
+                    <div class="text-primary font-bold text-xs mb-0.5">R$ 15,90</div>
+                    <h3 class="text-secondary font-bold text-xs hover:text-primary transition cursor-pointer">Petisco Bifinho Carne</h3>
+                    <div class="flex text-yellow-400 mt-1 text-[9px]">★★★★★ <span class="text-gray ml-1">(22)</span></div>
+                </div>
+                <!-- P8 -->
+                <div class="bg-white group relative">
+                    <div class="relative border border-gray-100 rounded-xl p-3 mb-2 h-40 flex items-center justify-center">
+                        <div id="bs-8" class="w-full h-full placeholder-img bg-transparent"><span class="text-[10px]">Img</span></div>
+                    </div>
+                    <div class="text-primary font-bold text-xs mb-0.5">R$ 34,90</div>
+                    <h3 class="text-secondary font-bold text-xs hover:text-primary transition cursor-pointer">Shampoo Pelos Claros</h3>
+                    <div class="flex text-yellow-400 mt-1 text-[9px]">★★★★★ <span class="text-gray ml-1">(9)</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Wave Separator (Top of Blog) -->
+    <div class="w-full overflow-hidden leading-none z-20 relative -mb-[1px]">
+        <svg class="w-full h-8 md:h-12 text-lightbg" fill="currentColor" preserveAspectRatio="none" viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,96L80,85.3C160,75,320,53,480,58.7C640,64,800,96,960,96C1120,96,1280,64,1360,48L1440,32L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z" opacity="0.3"></path>
+            <path d="M0,32L80,48C160,64,320,96,480,96C640,96,800,64,960,53.3C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z" opacity="0.6"></path>
+            <path d="M0,64L80,58.7C160,53,320,43,480,53.3C640,64,800,96,960,96C1120,96,1280,64,1360,48L1440,32L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path>
+        </svg>
+    </div>
+
+    <!-- Latest From Blog -->
+    <section id="blog" class="py-10 bg-lightbg">
+        <div class="container max-w-6xl mx-auto px-4 lg:px-8">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-xl md:text-2xl font-extrabold text-secondary flex items-center gap-2">Últimas do Blog <span class="text-primary text-xl">📝</span></h2>
+                <a href="#" class="text-xs font-bold text-gray hover:text-primary transition">Ver todos &rarr;</a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Blog Post 1 -->
+                <div class="group cursor-pointer bg-white rounded-2xl p-4 shadow-sm hover:shadow-md transition">
+                    <div class="relative mb-3">
+                        <span class="absolute top-3 left-3 bg-primary text-white text-[9px] font-bold px-2 py-0.5 rounded-full z-10 shadow-sm">Cães</span>
+                        <div id="blog-1-img" class="w-full aspect-[16/10] placeholder-img rounded-xl overflow-hidden bg-gray-300"><span class="text-xs">Img Blog 1</span></div>
+                    </div>
+                    <h3 class="text-base font-bold text-secondary group-hover:text-primary transition mb-1.5 leading-tight">Como Ajudar seu Pet a se Adaptar a um Novo Lar</h3>
+                    <p class="text-gray text-xs mb-3 line-clamp-2">Mudar de casa pode ser estressante. Confira nossas dicas para tornar essa transição o mais suave e tranquila possível para o seu cão.</p>
+                    <a href="#" class="inline-flex items-center gap-1.5 text-primary text-xs font-bold hover:text-secondary transition">Ler Mais <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+                </div>
+                <!-- Blog Post 2 -->
+                <div class="group cursor-pointer bg-white rounded-2xl p-4 shadow-sm hover:shadow-md transition">
+                    <div class="relative mb-3">
+                        <span class="absolute top-3 left-3 bg-green-500 text-white text-[9px] font-bold px-2 py-0.5 rounded-full z-10 shadow-sm">Nutrição</span>
+                        <div id="blog-2-img" class="w-full aspect-[16/10] placeholder-img rounded-xl overflow-hidden bg-gray-300"><span class="text-xs">Img Blog 2</span></div>
+                    </div>
+                    <h3 class="text-base font-bold text-secondary group-hover:text-primary transition mb-1.5 leading-tight">Como Escolher a Ração Certa para Seu Cão</h3>
+                    <p class="text-gray text-xs mb-3 line-clamp-2">A escolha correta da alimentação é fundamental para a segurança e o conforto do seu cachorro, influenciando diretamente na pelagem e energia.</p>
+                    <a href="#" class="inline-flex items-center gap-1.5 text-primary text-xs font-bold hover:text-secondary transition">Ler Mais <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+                </div>
+                <!-- Blog Post 3 -->
+                <div class="group cursor-pointer bg-white rounded-2xl p-4 shadow-sm hover:shadow-md transition">
+                    <div class="relative mb-3">
+                        <span class="absolute top-3 left-3 bg-primary text-white text-[9px] font-bold px-2 py-0.5 rounded-full z-10 shadow-sm">Saúde</span>
+                        <div id="blog-3-img" class="w-full aspect-[16/10] placeholder-img rounded-xl overflow-hidden bg-gray-300"><span class="text-xs">Img Blog 3</span></div>
+                    </div>
+                    <h3 class="text-base font-bold text-secondary group-hover:text-primary transition mb-1.5 leading-tight">Cuidados Essenciais de Inverno para Seu Pet</h3>
+                    <p class="text-gray text-xs mb-3 line-clamp-2">Com a queda das temperaturas, cães e gatos precisam de cuidados redobrados para evitar problemas respiratórios e de pele.</p>
+                    <a href="#" class="inline-flex items-center gap-1.5 text-primary text-xs font-bold hover:text-secondary transition">Ler Mais <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Wave Separator (Bottom of Blog) -->
+    <div class="w-full overflow-hidden leading-none z-20 relative -mt-[1px]">
+        <svg class="w-full h-8 md:h-12 text-lightbg" fill="currentColor" preserveAspectRatio="none" viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,96L80,85.3C160,75,320,53,480,58.7C640,64,800,96,960,96C1120,96,1280,64,1360,48L1440,32L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z" opacity="0.3"></path>
+            <path d="M0,32L80,48C160,64,320,96,480,96C640,96,800,64,960,53.3C1120,43,1280,53,1360,58.7L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z" opacity="0.6"></path>
+            <path d="M0,64L80,58.7C160,53,320,43,480,53.3C640,64,800,96,960,96C1120,96,1280,64,1360,48L1440,32L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+        </svg>
+    </div>
+
+    <!-- Testimonial & Gallery -->
+    <section class="py-10 bg-white">
+        <div class="container max-w-6xl mx-auto px-4 lg:px-8">
+            <!-- Testimonial -->
+            <div class="max-w-3xl mx-auto text-center mb-12 relative">
+                <div class="flex flex-col items-center justify-center mb-5">
+                    <div class="flex text-yellow-400 text-sm mb-3">★★★★★</div>
+                    <div id="testim-avatar" class="w-14 h-14 rounded-full placeholder-img bg-gray-200 mb-2"><span class="text-[8px]">Avatar</span></div>
+                    <h4 class="font-bold text-secondary text-xs">Juliana Silva</h4>
+                </div>
+                <p class="text-base md:text-lg font-bold text-secondary italic leading-relaxed">
+                    "Foi a melhor experiência de compra que já tive! A entrega foi super rápida, os produtos são de excelente qualidade e o atendimento veterinário pelo WhatsApp tirou todas as minhas dúvidas com muito carinho e paciência. Meu cachorro Duke amou os petiscos!"
+                </p>
+            </div>
+
+            <!-- Gallery (Instagram style) -->
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-1 max-w-5xl mx-auto">
+                <div id="gal-1" class="aspect-square placeholder-img overflow-hidden group relative cursor-pointer rounded-l-xl md:rounded-l-2xl md:rounded-r-none"><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center"><svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204... (inst) ..."/></svg></div><span class="text-[10px]">Instagram 1</span></div>
+                <div id="gal-2" class="aspect-square placeholder-img overflow-hidden group relative cursor-pointer"><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center"><svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163... (inst) ..."/></svg></div><span class="text-[10px]">Instagram 2</span></div>
+                <div id="gal-3" class="aspect-square placeholder-img overflow-hidden group relative cursor-pointer"><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center"><svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163... (inst) ..."/></svg></div><span class="text-[10px]">Instagram 3</span></div>
+                <div id="gal-4" class="aspect-square placeholder-img overflow-hidden group relative cursor-pointer hidden md:flex"><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center"><svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163... (inst) ..."/></svg></div><span class="text-[10px]">Instagram 4</span></div>
+                <div id="gal-5" class="aspect-square placeholder-img overflow-hidden group relative cursor-pointer hidden md:flex rounded-r-2xl"><div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center"><svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163... (inst) ..."/></svg></div><span class="text-[10px]">Instagram 5</span></div>
+            </div>
+
+            <!-- Brand Logos -->
+            <div class="flex flex-wrap justify-center items-center gap-6 md:gap-12 mt-10 opacity-50 grayscale hover:grayscale-0 transition duration-500">
+                <div id="brand-1" class="w-16 h-8 placeholder-img bg-transparent"><span class="text-[8px]">Marca 1</span></div>
+                <div id="brand-2" class="w-16 h-8 placeholder-img bg-transparent"><span class="text-[8px]">Marca 2</span></div>
+                <div id="brand-3" class="w-16 h-8 placeholder-img bg-transparent"><span class="text-[8px]">Marca 3</span></div>
+                <div id="brand-4" class="w-16 h-8 placeholder-img bg-transparent"><span class="text-[8px]">Marca 4</span></div>
+                <div id="brand-5" class="w-16 h-8 placeholder-img bg-transparent"><span class="text-[8px]">Marca 5</span></div>
+                <div id="brand-6" class="w-16 h-8 placeholder-img bg-transparent hidden md:flex"><span class="text-[8px]">Marca 6</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-100 pt-12 pb-6">
+        <div class="container max-w-6xl mx-auto px-4 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+                <!-- Col 1 -->
+                <div>
+                    <a href="#" class="flex items-center mb-4">
+                        <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779170697/Logo-_-Icon-Creativzlab-_For-LigthBG__zl2sl6.webp" alt="CreativzPet Logo" class="h-8 w-auto object-contain drop-shadow-sm">
+                    </a>
+                    <p class="text-gray text-[11px] mb-4 leading-relaxed pr-4">
+                        Entendemos que seu pet faz parte da família. Oferecemos os melhores produtos orgânicos e acessórios com foco total na saúde animal.
+                    </p>
+                    <div class="flex items-start gap-2 mb-4">
+                        <div class="text-primary"><svg class="w-4 h-4 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg></div>
+                        <div>
+                            <p class="text-[9px] text-gray uppercase tracking-widest mb-0.5">Fale Conosco</p>
+                            <p class="text-sm font-bold text-secondary">(11) 98765-4321</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-2">
+                        <a href="#" class="w-6 h-6 rounded-full bg-secondary text-white flex items-center justify-center hover:bg-primary transition"><span class="text-[10px]">f</span></a>
+                        <a href="#" class="w-6 h-6 rounded-full bg-secondary text-white flex items-center justify-center hover:bg-primary transition"><span class="text-[10px]">t</span></a>
+                        <a href="#" class="w-6 h-6 rounded-full bg-secondary text-white flex items-center justify-center hover:bg-primary transition"><span class="text-[10px]">in</span></a>
+                    </div>
+                </div>
+
+                <!-- Col 2 -->
+                <div>
+                    <h4 class="text-xs font-bold text-secondary mb-3">Links Rápidos</h4>
+                    <ul class="space-y-1.5 text-[11px] text-gray">
+                        <li><a href="#" class="hover:text-primary transition">Sobre Nós</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Nossos Serviços</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Política de Privacidade</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Termos e Condições</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Contato</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div>
+                    <h4 class="text-xs font-bold text-secondary mb-3">Nossos Serviços</h4>
+                    <ul class="space-y-1.5 text-[11px] text-gray">
+                        <li><a href="#" class="hover:text-primary transition">Banho & Tosa</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Atendimento Veterinário</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Táxi Dog</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Creche Pet</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Farmácia Completa</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div>
+                    <h4 class="text-xs font-bold text-secondary mb-3">Newsletter</h4>
+                    <p class="text-[10px] text-gray mb-2">Inscreva-se para receber ofertas exclusivas.</p>
+                    <form class="relative mb-3">
+                        <input type="email" placeholder="Seu e-mail aqui" class="w-full bg-lightbg border border-gray-200 rounded-full py-1.5 pl-3 pr-8 text-[11px] focus:outline-none focus:border-primary text-secondary">
+                        <button type="submit" class="absolute right-1 top-1/2 -translate-y-1/2 bg-primary text-white w-5 h-5 rounded-full flex items-center justify-center hover:bg-secondary transition">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </button>
+                    </form>
+                    <div class="flex gap-2">
+                        <div id="app-store" class="w-16 h-5 bg-secondary rounded placeholder-img"><span class="text-[5px] text-white">App Store</span></div>
+                        <div id="play-store" class="w-16 h-5 bg-secondary rounded placeholder-img"><span class="text-[5px] text-white">Google Play</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-gray-200 pt-4 flex flex-col md:flex-row justify-between items-center text-[9px] text-gray">
+                <p>Copyright © 2026 CreativzPet. Todos os direitos reservados.</p>
+                <div class="flex gap-1 mt-2 md:mt-0">
+                    <div id="pay-1" class="w-7 h-4 bg-lightbg rounded placeholder-img"><span class="text-[5px]">Visa</span></div>
+                    <div id="pay-2" class="w-7 h-4 bg-lightbg rounded placeholder-img"><span class="text-[5px]">MC</span></div>
+                    <div id="pay-3" class="w-7 h-4 bg-lightbg rounded placeholder-img"><span class="text-[5px]">Pix</span></div>
+                    <div id="pay-4" class="w-7 h-4 bg-lightbg rounded placeholder-img"><span class="text-[5px]">Boleto</span></div>
+                </div>
+                <div class="flex gap-3 mt-2 md:mt-0">
+                    <a href="#" class="hover:text-primary transition">Termos de Uso</a>
+                    <a href="#" class="hover:text-primary transition">Política de Privacidade</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script for Mobile Menu -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
