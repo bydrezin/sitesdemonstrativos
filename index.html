@@ -691,15 +691,52 @@
         // Start auto-play
         resetGalleryInterval();
 
-        // Trigger GoHighLevel Chat Widget
+        // Trigger GoHighLevel Chat Widget (Ultra Robust Version)
         const btnTestarIa = document.getElementById('btn-testar-ia');
         if (btnTestarIa) {
             btnTestarIa.addEventListener('click', function(e) {
                 e.preventDefault();
-                if (window.leadConnector && window.leadConnector.chatWidget) {
-                    window.leadConnector.chatWidget.openWidget();
-                } else {
-                    console.warn('GoHighLevel Chat Widget não está carregado ainda.');
+                
+                function tryOpenWidget() {
+                    // 1. Tenta API oficial documentada
+                    if (window.leadConnector && window.leadConnector.chatWidget && typeof window.leadConnector.chatWidget.openWidget === 'function') {
+                        window.leadConnector.chatWidget.openWidget();
+                        return true;
+                    }
+                    // 2. Tenta namespace alternativo
+                    if (window.chatWidget && typeof window.chatWidget.open === 'function') {
+                        window.chatWidget.open();
+                        return true;
+                    }
+                    if (window.chatWidget && typeof window.chatWidget.openWidget === 'function') {
+                        window.chatWidget.openWidget();
+                        return true;
+                    }
+                    // 3. Fallback: Simular clique no botão flutuante escondido no Shadow DOM
+                    try {
+                        const chatWidgetEl = document.querySelector('chat-widget');
+                        if (chatWidgetEl && chatWidgetEl.shadowRoot) {
+                            const widgetBtn = chatWidgetEl.shadowRoot.querySelector('button');
+                            if (widgetBtn) {
+                                widgetBtn.click();
+                                return true;
+                            }
+                        }
+                    } catch (err) {}
+                    
+                    return false;
+                }
+
+                if (!tryOpenWidget()) {
+                    // Se não conseguir abrir na hora, tenta a cada 500ms por 5 segundos
+                    let tries = 0;
+                    const interval = setInterval(function() {
+                        tries++;
+                        if (tryOpenWidget() || tries >= 10) {
+                            clearInterval(interval);
+                            if (tries >= 10) console.warn('Falha ao abrir o GoHighLevel Chat Widget após 5 segundos.');
+                        }
+                    }, 500);
                 }
             });
         }
