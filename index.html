@@ -135,21 +135,15 @@
                         <!-- Grid Circular Focado (Atrás da Imagem) -->
                         <div class="absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[450px] md:w-[550px] h-[450px] md:h-[550px] pointer-events-none z-0" style="background-image: linear-gradient(rgba(255, 255, 255, 0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.4) 1px, transparent 1px); background-size: 35px 35px; mask-image: radial-gradient(circle, black 0%, transparent 65%); -webkit-mask-image: radial-gradient(circle, black 0%, transparent 65%);"></div>
                         
-                        <!-- Container Estrutural do Efeito 3D Duplo -->
-                        <div class="relative w-full aspect-[4/4.5]">
+                        <!-- Retângulo Branco Sólido e Imagem com Clip-Path -->
+                        <div class="relative w-full mt-4">
+                            <!-- Retângulo Base Branco (Altura menor) -->
+                            <div class="absolute h-[25%] md:h-[30%] bottom-0 left-0 right-0 bg-white rounded-[2.5rem] z-0 shadow-2xl"></div>
                             
-                            <!-- Base do Cartão Branco (Corta a parte de baixo) -->
-                            <div class="absolute h-[25%] md:h-[28%] bottom-0 -left-6 -right-6 md:-left-10 md:-right-10 bg-white rounded-[2.5rem] shadow-2xl overflow-hidden z-0">
-                                <!-- Imagem Inferior (Contida no cartão, cortada nas bordas) -->
-                                <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779165058/Cachorro-na-banheira_u5s9nz.webp" alt="Base da Banheira" class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[115%] max-w-none h-auto object-contain origin-bottom translate-y-6">
+                            <!-- Imagem do Cachorro Recortada apenas na Base e Laterais -->
+                            <div class="relative z-10 w-full [clip-path:inset(-100%_0_0_0_round_0_0_2.5rem_2.5rem)]">
+                                <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779165058/Cachorro-na-banheira_u5s9nz.webp" alt="Cachorro Feliz na Banheira" class="w-[120%] max-w-none -ml-[10%] h-auto object-contain origin-bottom translate-y-[6%]">
                             </div>
-                            
-                            <!-- Imagem Superior (Vaza para fora do cartão) -->
-                            <div class="absolute inset-0 z-10 pointer-events-none [clip-path:inset(-50%_-20%_15%_-20%)]">
-                                <!-- A mesma imagem sobreposta, mas com a base transparente/cortada pelo clip-path -->
-                                <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779165058/Cachorro-na-banheira_u5s9nz.webp" alt="Cachorro Feliz na Banheira" class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[115%] max-w-none h-auto object-contain origin-bottom translate-y-6">
-                            </div>
-
                         </div>
 
                         <!-- Pata Decorativa 2 (Menor - Topo Esquerda) -->
