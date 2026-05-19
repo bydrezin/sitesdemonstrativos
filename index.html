@@ -113,10 +113,9 @@
                         Nós não vendemos 'sites bonitinhos'. Implementamos uma máquina de vendas com Inteligência Artificial que atende tutores em 3 segundos e agenda consultas enquanto você dorme.
                     </p>
                     <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
-                        <a href="#loja" class="inline-flex items-center justify-center px-8 py-3.5 bg-primary text-white rounded-full font-bold text-lg hover:bg-white hover:text-secondary transition-colors shadow-lg group">
-                            Testar Atendimento com IA 🧠
-                            <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                        </a>
+                        <button id="btn-testar-ia" class="inline-flex items-center justify-center px-8 py-3.5 bg-primary text-white rounded-full font-bold text-lg hover:bg-white hover:text-secondary transition-colors shadow-lg group">
+                            Testar Atendimento com IA
+                        </button>
                         <div class="flex items-center gap-2 bg-white/10 border border-white/20 px-4 py-2 rounded-full shadow-sm text-sm font-bold text-white backdrop-blur-sm">
                             <span class="text-yellow-400">★ 5.0</span> - A Estrutura Que Mais Converte no Brasil
                         </div>
@@ -691,6 +690,19 @@
 
         // Start auto-play
         resetGalleryInterval();
+
+        // Trigger GoHighLevel Chat Widget
+        const btnTestarIa = document.getElementById('btn-testar-ia');
+        if (btnTestarIa) {
+            btnTestarIa.addEventListener('click', function(e) {
+                e.preventDefault();
+                if (window.leadConnector && window.leadConnector.chatWidget) {
+                    window.leadConnector.chatWidget.openWidget();
+                } else {
+                    console.warn('GoHighLevel Chat Widget não está carregado ainda.');
+                }
+            });
+        }
     </script>
     
     <!-- WhatsApp Floating Button -->
