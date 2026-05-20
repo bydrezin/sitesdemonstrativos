@@ -717,47 +717,27 @@
 
 
 
-    <!-- Botão de Telefone Customizado (substitui o widget de voz do LeadConnector) -->
-    <style>
-      .custom-phone-clone {
-        position: fixed !important;
-        bottom: 100px !important;
-        right: 20px !important;
-        background-color: #1a65ff !important;
-        width: 60px !important;
-        height: 60px !important;
-        border-radius: 50% !important;
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.2) !important;
-        z-index: 99999 !important;
-        text-decoration: none !important;
-        transition: transform 0.2s !important;
-      }
-      .custom-phone-clone:hover {
-        transform: scale(1.05) !important;
-      }
-      @media (max-width: 768px) {
-        .custom-phone-clone {
-          bottom: 90px !important;
-          right: 15px !important;
-          width: 50px !important;
-          height: 50px !important;
-        }
-      }
-    </style>
-
-    <a href="tel:+5511999999999" class="custom-phone-clone">
-      <svg fill="#ffffff" width="28px" height="28px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
-      </svg>
-    </a>
+    <!-- Widget: Ligação por Voz (Telefone) -->
+    <script src="https://widgets.leadconnectorhq.com/loader.js"
+            data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+            data-widget-id="6a0d50834d25f28501effbe6"></script>
 
     <!-- Widget: Chat Standard -->
     <script src="https://widgets.leadconnectorhq.com/loader.js"
             data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
             data-widget-id="6a0cd3550732dc5e3f0ce3da"></script>
+
+    <script>
+      // Espera 3 segundos para garantir que o GHL carregou o botão blindado
+      setTimeout(function() {
+          let widgets = document.querySelectorAll('chat-widget');
+          if(widgets.length >= 2) {
+              // Força o primeiro botão a levitar 90px
+              widgets[0].style.setProperty('transform', 'translateY(-90px)', 'important');
+              widgets[0].style.setProperty('z-index', '99999', 'important');
+          }
+      }, 3000);
+    </script>
 
 </body>
 </html>
