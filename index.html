@@ -335,8 +335,11 @@
     <!-- Wave Separator (Bottom of Categories) -->
     <!-- Sobre Nós e Nosso Espaço -->
     <section id="sobre" class="bg-white relative z-10 pb-8">
-        <!-- Wrapper que engloba Sobre Nós -->
+        <!-- Wrapper Escuro que engloba Sobre Nós e Prova Social -->
         <div class="w-full bg-white py-16 relative overflow-hidden">
+            <!-- Grid com luz azul (mesmo efeito da Seção 1, adaptado para fundo branco) -->
+            <div class="absolute inset-0 pointer-events-none z-0" style="background-image: linear-gradient(rgba(0,174,239,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(0,174,239,0.07) 1px, transparent 1px); background-size: 40px 40px;"></div>
+            <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[500px] bg-[radial-gradient(ellipse_at_center,rgba(0,174,239,0.13)_0%,transparent_70%)] pointer-events-none z-0"></div>
             
             <div class="container max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12 relative z-10">
                 <div class="w-full lg:w-1/2 z-10 text-center lg:text-left">
@@ -385,20 +388,8 @@
                 </div>
             </div>
 
-        </div>
-    </section>
-
-    <!-- Zona de Transição: Grids com Luz (mesmo design do Hero) -->
-    <div class="w-full bg-secondary relative overflow-hidden py-20">
-        <!-- Gradiente escuro de fundo -->
-        <div class="absolute inset-0 bg-gradient-to-r from-blue-950 via-[#0B1B3F] to-transparent pointer-events-none z-0"></div>
-        <!-- Luz radial azul forte (replicada do Hero) -->
-        <div class="absolute top-[-20%] right-[-10%] w-[120%] lg:w-[70%] h-[140%] bg-[radial-gradient(ellipse_at_center_right,rgba(0,174,239,0.35)_0%,transparent_70%)] pointer-events-none z-0"></div>
-        <!-- Luz radial secundária centro-esquerda para profundidade -->
-        <div class="absolute bottom-[-10%] left-[-5%] w-[50%] h-[80%] bg-[radial-gradient(ellipse_at_bottom_left,rgba(0,174,239,0.12)_0%,transparent_70%)] pointer-events-none z-0"></div>
-
-        <!-- Prova Social (Depoimentos) -->
-        <div class="container max-w-6xl mx-auto px-4 lg:px-8 text-center relative z-10 flex flex-col items-center">
+            <!-- Prova Social (Depoimentos) -->
+            <div class="mt-24 container max-w-6xl mx-auto px-4 lg:px-8 text-center relative z-10 flex flex-col items-center">
                 <!-- Pre-headline Tag igual a da Sessao 1 -->
                 <div class="inline-flex items-center gap-2.5 bg-secondary/90 border border-white/10 px-4 py-2 rounded-full shadow-sm text-sm font-bold text-white mb-6">
                     <span class="w-2.5 h-2.5 rounded-full bg-[#00AEEF] shadow-[0_0_10px_#00AEEF] shrink-0"></span>
@@ -535,10 +526,9 @@
                     </div>
                     </div>
                 </div>
+            </div>
         </div>
-        </div>
-    </div>
-
+    </section>
 
 
 
