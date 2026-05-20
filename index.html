@@ -29,7 +29,22 @@
             }
         }
     </script>
-    <style>body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:#6b7280;background-color:#f2f4f7}h1,h2,h3,h4,h5,h6{color:#0b1b3f;font-weight:700}.placeholder-img{background-color:#e2e8f0;display:flex;align-items:center;justify-content:center;color:#94a3b8;font-weight:700;text-align:center}.hide-scrollbar::-webkit-scrollbar{display:none}.hide-scrollbar{-ms-overflow-style:none;scrollbar-width:none}@keyframes marquee{0%{transform:translateX(0%)}100%{transform:translateX(-50%)}}.animate-marquee{animation:marquee 90s linear infinite}.animate-marquee:hover{animation-play-state:paused}chat-widget.voice-call-widget{position:fixed!important;bottom:100px!important;z-index:99999!important}chat-widget.standard-chat-widget{position:fixed!important;bottom:20px!important;z-index:99999!important}.btn-chamada-ativa-simples{background-color:#ff3b30!important;color:white!important;border-color:#ff3b30!important;font-weight:bold!important}@keyframes double-wave{0%{box-shadow:0 0 0 0 rgba(37,211,102,0.6),0 0 0 0 rgba(37,211,102,0.3)}100%{box-shadow:0 0 0 10px rgba(37,211,102,0),0 0 0 20px rgba(37,211,102,0)}}.animate-double-wave{animation:double-wave 3s infinite ease-out}@keyframes float{0%{transform:translateY(0px)}50%{transform:translateY(-8px)}100%{transform:translateY(0px)}}.animate-float{animation:float 4s ease-in-out infinite}.animate-float-delay-1{animation:float 4.5s ease-in-out infinite 1s}.animate-float-delay-2{animation:float 5s ease-in-out infinite 2s}</style>
+    <style>body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:#6b7280;background-color:#f2f4f7}h1,h2,h3,h4,h5,h6{color:#0b1b3f;font-weight:700}.placeholder-img{background-color:#e2e8f0;display:flex;align-items:center;justify-content:center;color:#94a3b8;font-weight:700;text-align:center}.hide-scrollbar::-webkit-scrollbar{display:none}.hide-scrollbar{-ms-overflow-style:none;scrollbar-width:none}@keyframes marquee{0%{transform:translateX(0%)}100%{transform:translateX(-50%)}}.animate-marquee{animation:marquee 90s linear infinite}.animate-marquee:hover{animation-play-state:paused}
+    /* Força bruta no primeiro widget injetado (Coloque o script de Telefone ANTES do script de Chat no HTML) */
+    chat-widget:nth-of-type(1), chat-widget.voice-call-widget {
+        position: fixed !important;
+        bottom: 100px !important;
+        right: 20px !important;
+        z-index: 99999 !important;
+    }
+    /* Força bruta no segundo widget injetado (Script do Chat) */
+    chat-widget:nth-of-type(2), chat-widget.standard-chat-widget {
+        position: fixed !important;
+        bottom: 20px !important;
+        right: 20px !important;
+        z-index: 99998 !important;
+    }
+    .btn-chamada-ativa-simples{background-color:#ff3b30!important;color:white!important;border-color:#ff3b30!important;font-weight:bold!important}@keyframes double-wave{0%{box-shadow:0 0 0 0 rgba(37,211,102,0.6),0 0 0 0 rgba(37,211,102,0.3)}100%{box-shadow:0 0 0 10px rgba(37,211,102,0),0 0 0 20px rgba(37,211,102,0)}}.animate-double-wave{animation:double-wave 3s infinite ease-out}@keyframes float{0%{transform:translateY(0px)}50%{transform:translateY(-8px)}100%{transform:translateY(0px)}}.animate-float{animation:float 4s ease-in-out infinite}.animate-float-delay-1{animation:float 4.5s ease-in-out infinite 1s}.animate-float-delay-2{animation:float 5s ease-in-out infinite 2s}</style>
 </head>
 <body class="antialiased overflow-x-hidden bg-secondary">
 
@@ -717,40 +732,17 @@
 
 
 
-    <!-- GoHighLevel Chat Widget Deferral Script -->
-    <script>
-        (function() {
-            function loadGHLWidgets() {
-                if (window.ghlWidgetsLoaded) return;
-                window.ghlWidgetsLoaded = true;
-                
-                // Widget 1: Ligação por Voz (ID: 6a0d50834d25f28501effbe6)
-                const scriptVoice = document.createElement('script');
-                scriptVoice.src = "https://widgets.leadconnectorhq.com/loader.js";
-                scriptVoice.setAttribute('data-resources-url', "https://widgets.leadconnectorhq.com/chat-widget/loader.js");
-                scriptVoice.setAttribute('data-widget-id', "6a0d50834d25f28501effbe6");
-                scriptVoice.async = true;
-                document.body.appendChild(scriptVoice);
-                
-                // Widget 2: Chat Standard (ID: 6a0cd3550732dc5e3f0ce3da)
-                const scriptChat = document.createElement('script');
-                scriptChat.src = "https://widgets.leadconnectorhq.com/loader.js";
-                scriptChat.setAttribute('data-resources-url', "https://widgets.leadconnectorhq.com/chat-widget/loader.js");
-                scriptChat.setAttribute('data-widget-id', "6a0cd3550732dc5e3f0ce3da");
-                scriptChat.async = true;
-                document.body.appendChild(scriptChat);
-            }
-            window.loadGHLWidget = loadGHLWidgets; // Mapeia para compatibilidade com o clique imediato
-            
-            const interactionEvents = ['mouseover', 'keydown', 'touchstart', 'scroll'];
-            function triggerGHL() {
-                loadGHLWidgets();
-                interactionEvents.forEach(e => window.removeEventListener(e, triggerGHL));
-            }
-            interactionEvents.forEach(e => window.addEventListener(e, triggerGHL, { passive: true }));
-            setTimeout(loadGHLWidgets, 3500);
-        })();
-    </script>
+    <!-- Widget: Ligação por Voz (Telefone) - bottom: 100px -->
+    <script src="https://widgets.leadconnectorhq.com/loader.js"
+            data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+            data-widget-id="6a0d50834d25f28501effbe6"
+            async></script>
+
+    <!-- Widget: Chat Standard - bottom: 20px -->
+    <script src="https://widgets.leadconnectorhq.com/loader.js"
+            data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+            data-widget-id="6a0cd3550732dc5e3f0ce3da"
+            async></script>
 
     <!-- Script de Toggle de Chamada (Deep Piercing + Estado Simples) -->
     <script>
@@ -825,32 +817,17 @@
         document.addEventListener('DOMContentLoaded', () => {
 
             // --- Integração Visual: Ajustar posição dos widgets e empilhá-los ---
-            function applyShadowStyles(widget, bottomValue) {
-                widget.style.setProperty('bottom', bottomValue, 'important');
-                widget.style.setProperty('position', 'fixed', 'important');
-                widget.style.setProperty('z-index', '99999', 'important');
-                
+            function applyShadowStyles(widget) {
                 const inject = () => {
                     if (widget.shadowRoot) {
                         if (widget.shadowRoot.querySelector('#custom-position-style')) return;
                         
                         const styleTag = document.createElement('style');
                         styleTag.id = 'custom-position-style';
+                        // Reabilita o clique dentro da shadow dom, já que o host element está com pointer-events: none
                         styleTag.textContent = `
-                            .chat-launcher, 
-                            [class*="launcher"], 
-                            [id*="launcher"], 
-                            button.launcher {
-                                bottom: ${bottomValue} !important;
-                            }
-                            
-                            .chat-widget, 
-                            .chat-container, 
-                            .widget-container,
-                            [class*="container"],
-                            [id*="widget-container"],
-                            iframe {
-                                bottom: ${bottomValue} !important;
+                            * {
+                                pointer-events: auto !important;
                             }
                         `;
                         widget.shadowRoot.appendChild(styleTag);
@@ -870,7 +847,7 @@
                 }, 100);
             }
 
-            // Função para classificar e estilizar um widget com base no seu ID de Widget
+            // Classify widget
             function classifyWidget(widget) {
                 const widgetId = widget.getAttribute('widget-id') || 
                                  widget.getAttribute('data-widget-id') || 
@@ -878,12 +855,11 @@
                 
                 if (widgetId === '6a0d50834d25f28501effbe6') {
                     widget.classList.add('voice-call-widget');
-                    applyShadowStyles(widget, '100px'); // Empilhado acima (100px)
+                    applyShadowStyles(widget);
                 } else if (widgetId === '6a0cd3550732dc5e3f0ce3da') {
                     widget.classList.add('standard-chat-widget');
-                    applyShadowStyles(widget, '20px');  // Fica na base (20px)
+                    applyShadowStyles(widget);
                 } else {
-                    // Polling rápido caso o Stencil demore alguns milissegundos para refletir o atributo no elemento DOM
                     let attempts = 0;
                     const idInterval = setInterval(() => {
                         attempts++;
@@ -894,10 +870,10 @@
                             clearInterval(idInterval);
                             if (currentId === '6a0d50834d25f28501effbe6') {
                                 widget.classList.add('voice-call-widget');
-                                applyShadowStyles(widget, '100px');
+                                applyShadowStyles(widget);
                             } else if (currentId === '6a0cd3550732dc5e3f0ce3da') {
                                 widget.classList.add('standard-chat-widget');
-                                applyShadowStyles(widget, '20px');
+                                applyShadowStyles(widget);
                             }
                         }
                         if (attempts > 30) clearInterval(idInterval);
@@ -921,5 +897,6 @@
             widgetObserver.observe(document.body, { childList: true, subtree: true });
         });
     </script>
+
 </body>
 </html>
