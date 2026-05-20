@@ -69,11 +69,11 @@
 
             <!-- Call Button & Mobile Menu -->
             <div class="flex items-center gap-4 lg:ml-6">
-                <a href="#" id="btn-ligar-topo" class="hidden sm:flex items-center gap-2 bg-gradient-to-r from-primary to-blue-800 text-white px-5 py-2.5 rounded-xl font-bold text-xs hover:scale-105 transition-all duration-300 shadow-md">
+                <a href="javascript:void(0)" id="btn-ligar-topo" onclick="return false;" class="hidden sm:flex items-center gap-2 bg-gradient-to-r from-primary to-blue-800 text-white px-5 py-2.5 rounded-xl font-bold text-xs hover:scale-105 transition-all duration-300 shadow-md">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                     Ligue para nós
                 </a>
-                <a href="#" id="btn-ligar-topo-mob" class="sm:hidden flex items-center gap-1.5 bg-gradient-to-r from-primary to-blue-800 text-white px-3.5 py-2 rounded-xl font-bold text-xs hover:scale-105 transition-all duration-300 shadow-md">
+                <a href="javascript:void(0)" id="btn-ligar-topo-mob" onclick="return false;" class="sm:hidden flex items-center gap-1.5 bg-gradient-to-r from-primary to-blue-800 text-white px-3.5 py-2 rounded-xl font-bold text-xs hover:scale-105 transition-all duration-300 shadow-md">
                     <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                     Ligue Agora
                 </a>
@@ -744,76 +744,7 @@
             data-widget-id="6a0cd3550732dc5e3f0ce3da"
             async></script>
 
-    <!-- Script de Toggle de Chamada (Deep Piercing + Estado Simples) -->
     <script>
-        // Variáveis de estado
-        let inCallGlobal = false;
-        let originalButtonText = "";
-
-        document.addEventListener('click', function(e) {
-            // 1. Identifica se o clique foi em um botão/link
-            const target = e.target.closest('a, button');
-            if (!target) return;
-
-            // 2. Normaliza os textos para comparação sem erros
-            const currentText = (target.innerText || '').toLowerCase();
-            const isLigue = currentText.includes('ligue para nós');
-            const isEncerrar = currentText.includes('encerrar chamada');
-
-            // 3. Se não for nenhum dos nossos botões, encerra o script aqui
-            if (!isLigue && !isEncerrar) return;
-
-            // Previne qualquer ação padrão do navegador
-            e.preventDefault();
-
-            // Salva o texto original apenas no primeiro clique
-            if (!originalButtonText) originalButtonText = target.innerText;
-
-            // =========================================================
-            // FUNÇÃO DE PERFURAÇÃO PROFUNDA (CÉREBRO DO SCRIPT)
-            // =========================================================
-            function deepSearchAndClick(root, searchTerms) {
-                const elements = root.querySelectorAll('button, div[role="button"], a, .vapi-btn');
-                for (let el of elements) {
-                    const elText = el.innerText ? el.innerText.toLowerCase() : '';
-                    if (searchTerms.some(term => elText === term || elText.includes(term))) {
-                        el.click();
-                        return true;
-                    }
-                }
-                const allNodes = root.querySelectorAll('*');
-                for (let node of allNodes) {
-                    if (node.shadowRoot && deepSearchAndClick(node.shadowRoot, searchTerms)) {
-                        return true;
-                    }
-                }
-                return false;
-            }
-            // =========================================================
-
-            if (!inCallGlobal) {
-                // 🚀 ESTADO: INICIAR CHAMADA (Primeiro Clique)
-                const clickedStart = deepSearchAndClick(document, ['ligar agora', 'falar agora', 'iniciar']);
-
-                if (clickedStart) {
-                    inCallGlobal = true;
-                    target.innerHTML = 'Encerrar Chamada';
-                    target.classList.add('btn-chamada-ativa-simples');
-                } else {
-                    // Fallback: widget bloqueado (CORS). Rola a tela.
-                    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-                }
-            } else {
-                // 🛑 ESTADO: ENCERRAR CHAMADA (Segundo Clique)
-                deepSearchAndClick(document, ['encerrar', 'desligar', 'parar', 'stop', 'end call']);
-
-                // Reseta o visual do botão superior independentemente
-                inCallGlobal = false;
-                target.innerHTML = originalButtonText;
-                target.classList.remove('btn-chamada-ativa-simples');
-            }
-        });
-
         document.addEventListener('DOMContentLoaded', () => {
 
             // --- Integração Visual: Ajustar posição dos widgets e empilhá-los ---
