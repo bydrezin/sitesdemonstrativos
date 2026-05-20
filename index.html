@@ -717,27 +717,16 @@
 
 
 
-    <!-- Widget: Ligação por Voz (Telefone) -->
-    <script src="https://widgets.leadconnectorhq.com/loader.js"
-            data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
-            data-widget-id="6a0d50834d25f28501effbe6"></script>
+    <!-- Widget: Ligação por Voz (Telefone) - Modo Inline com wrapper fixo -->
+    <div style="position: fixed; bottom: 100px; right: 20px; z-index: 99999;">
+        <div data-chat-widget data-widget-id="6a0d50834d25f28501effbe6" data-location-id="EmTYdhwsl14rtOkywLwY"></div>
+        <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a0d50834d25f28501effbe6"></script>
+    </div>
 
     <!-- Widget: Chat Standard -->
     <script src="https://widgets.leadconnectorhq.com/loader.js"
             data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
             data-widget-id="6a0cd3550732dc5e3f0ce3da"></script>
-
-    <script>
-      // Espera 3 segundos para garantir que o GHL carregou o botão blindado
-      setTimeout(function() {
-          let widgets = document.querySelectorAll('chat-widget');
-          if(widgets.length >= 2) {
-              // Força o primeiro botão a levitar 90px
-              widgets[0].style.setProperty('transform', 'translateY(-90px)', 'important');
-              widgets[0].style.setProperty('z-index', '99999', 'important');
-          }
-      }, 3000);
-    </script>
 
 </body>
 </html>
