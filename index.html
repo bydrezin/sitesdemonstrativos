@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creativzlab® | Demo Site Pet</title>
+    <link rel="preload" fetchpriority="high" as="image" href="https://res.cloudinary.com/do789aovx/image/upload/q_auto,f_auto,w_850/v1779165058/Cachorro-na-banheira_u5s9nz.webp" type="image/webp">
     <link rel="icon" type="image/png" href="https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779247251/as_folhas_caem_no_quintal_vxj1pl.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -28,26 +29,7 @@
             }
         }
     </script>
-    <style>
-        body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #6B7280; background-color: #F2F4F7; }
-        h1, h2, h3, h4, h5, h6 { color: #0B1B3F; font-weight: 700; }
-        .placeholder-img { background-color: #e2e8f0; display: flex; align-items: center; justify-content: center; color: #94a3b8; font-weight: 700; text-align: center; }
-        /* Hide scrollbar for horizontal scrolling containers */
-        .hide-scrollbar::-webkit-scrollbar { display: none; }
-        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        
-        /* Marquee Animation */
-        @keyframes marquee {
-            0% { transform: translateX(0%); }
-            100% { transform: translateX(-50%); }
-        }
-        .animate-marquee {
-            animation: marquee 90s linear infinite;
-        }
-        .animate-marquee:hover {
-            animation-play-state: paused;
-        }
-    </style>
+    <style>body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:#6b7280;background-color:#f2f4f7}h1,h2,h3,h4,h5,h6{color:#0b1b3f;font-weight:700}.placeholder-img{background-color:#e2e8f0;display:flex;align-items:center;justify-content:center;color:#94a3b8;font-weight:700;text-align:center}.hide-scrollbar::-webkit-scrollbar{display:none}.hide-scrollbar{-ms-overflow-style:none;scrollbar-width:none}@keyframes marquee{0%{transform:translateX(0%)}100%{transform:translateX(-50%)}}.animate-marquee{animation:marquee 90s linear infinite}.animate-marquee:hover{animation-play-state:paused}</style>
 </head>
 <body class="antialiased overflow-x-hidden bg-secondary">
 
@@ -61,7 +43,7 @@
         <div class="container max-w-6xl mx-auto px-4 lg:px-8 flex justify-between items-center">
             <!-- Logo -->
             <div class="flex items-center">
-                <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779222650/Logo_Icon_-_Creativzlab_For_DarkBG_qgpjow.png" alt="CreativzPet Logo" class="h-6 md:h-7 w-auto object-contain drop-shadow-sm">
+                <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto,f_auto,w_200/v1779222650/Logo_Icon_-_Creativzlab_For_DarkBG_qgpjow.png" alt="CreativzPet Logo" class="h-6 md:h-7 w-auto object-contain drop-shadow-sm" decoding="async">
             </div>
 
             <!-- Search Bar (Desktop/Tablet) -->
@@ -139,18 +121,25 @@
                             
                             <!-- Imagem do Cachorro Recortada APENAS na Base -->
                             <div class="relative z-10 w-full [clip-path:inset(-100%_-50%_0_-50%)]">
-                                <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779165058/Cachorro-na-banheira_u5s9nz.webp" alt="Cachorro Feliz na Banheira" class="w-[130%] max-w-none -ml-[15%] h-auto object-contain origin-bottom translate-y-[3%]">
+                                <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto,f_auto,w_850/v1779165058/Cachorro-na-banheira_u5s9nz.webp" 
+                                     srcset="https://res.cloudinary.com/do789aovx/image/upload/q_auto,f_auto,w_500/v1779165058/Cachorro-na-banheira_u5s9nz.webp 500w,
+                                             https://res.cloudinary.com/do789aovx/image/upload/q_auto,f_auto,w_850/v1779165058/Cachorro-na-banheira_u5s9nz.webp 850w"
+                                     sizes="(max-width: 768px) 100vw, 50vw"
+                                     fetchpriority="high"
+                                     decoding="async"
+                                     alt="Cachorro Feliz na Banheira" 
+                                     class="w-[130%] max-w-none -ml-[15%] h-auto object-contain origin-bottom translate-y-[3%]">
                             </div>
                         </div>
 
                         <!-- Pata Decorativa 2 (Menor - Topo Esquerda) -->
-                        <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779165063/patas_jtnhor.webp" alt="Pata Decorativa Pequena" class="absolute top-12 sm:top-20 -left-1 sm:-left-4 w-14 sm:w-20 md:w-24 z-40 blur-[1px] rotate-[15deg] opacity-90">
+                        <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto,f_auto,w_150/v1779165063/patas_jtnhor.webp" alt="Pata Decorativa Pequena" class="absolute top-12 sm:top-20 -left-1 sm:-left-4 w-14 sm:w-20 md:w-24 z-40 blur-[1px] rotate-[15deg] opacity-90" decoding="async">
                         
                         <!-- Pata Decorativa 3 (Mínima - Topo Direita) -->
-                        <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779165063/patas_jtnhor.webp" alt="Pata Decorativa Menor" class="absolute top-8 sm:top-12 right-1 sm:right-6 w-12 sm:w-14 md:w-16 z-40 blur-[3px] rotate-[60deg] opacity-80">
+                        <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto,f_auto,w_150/v1779165063/patas_jtnhor.webp" alt="Pata Decorativa Menor" class="absolute top-8 sm:top-12 right-1 sm:right-6 w-12 sm:w-14 md:w-16 z-40 blur-[3px] rotate-[60deg] opacity-80" decoding="async">
 
                         <!-- Pata Decorativa 1 (Principal - Original) -->
-                        <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779165063/patas_jtnhor.webp" alt="Pata Decorativa" class="absolute -bottom-2 -right-2 sm:-bottom-4 sm:-right-4 md:-right-6 w-24 sm:w-32 md:w-40 z-40 blur-[2px] rotate-[-25deg] drop-shadow-2xl scale-110">
+                        <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto,f_auto,w_200/v1779165063/patas_jtnhor.webp" alt="Pata Decorativa" class="absolute -bottom-2 -right-2 sm:-bottom-4 sm:-right-4 md:-right-6 w-24 sm:w-32 md:w-40 z-40 blur-[2px] rotate-[-25deg] drop-shadow-2xl scale-110" decoding="async">
                     </div>
                 </div>
             </div>
@@ -189,11 +178,11 @@
                 </div>
                 <!-- Desktop Image Wrapper with Bottom Clip -->
                 <div class="absolute inset-0 z-10 pointer-events-none [clip-path:inset(-100%_-20%_0_-20%)] hidden md:block rounded-b-[3rem]">
-                    <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779220034/bigbhoter_jmnla1.png" alt="Promoção Cão e Gato" class="absolute right-12 md:right-20 lg:right-28 -bottom-10 h-[120%] md:h-[130%] lg:h-[140%] w-auto object-bottom object-contain drop-shadow-[-15px_15px_30px_rgba(0,0,0,0.6)] transform rotate-6 origin-bottom">
+                    <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto,f_auto,w_700/v1779220034/bigbhoter_jmnla1.png" alt="Promoção Cão e Gato" class="absolute right-12 md:right-20 lg:right-28 -bottom-10 h-[120%] md:h-[130%] lg:h-[140%] w-auto object-bottom object-contain drop-shadow-[-15px_15px_30px_rgba(0,0,0,0.6)] transform rotate-6 origin-bottom" loading="lazy" decoding="async">
                 </div>
                 <!-- Mobile Image Wrapper (Inside Box) -->
                 <div class="relative w-[calc(100%+4rem)] -mx-8 -mb-8 mt-8 pt-4 block md:hidden z-10 overflow-hidden rounded-b-[3rem] flex justify-center items-end">
-                    <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779220034/bigbhoter_jmnla1.png" alt="Promoção Cão e Gato Mobile" class="w-[135%] max-w-none h-auto object-bottom object-contain drop-shadow-[-10px_10px_30px_rgba(0,0,0,0.6)] transform rotate-3 origin-bottom translate-y-8">
+                    <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto,f_auto,w_500/v1779220034/bigbhoter_jmnla1.png" alt="Promoção Cão e Gato Mobile" class="w-[135%] max-w-none h-auto object-bottom object-contain drop-shadow-[-10px_10px_30px_rgba(0,0,0,0.6)] transform rotate-3 origin-bottom translate-y-8" loading="lazy" decoding="async">
                 </div>
             </div>
 
@@ -205,7 +194,7 @@
                         <div class="bg-primary text-white font-bold text-[10px] inline-block px-2.5 py-1 rounded-full mb-2">50% OFF</div>
                         <h3 class="text-lg text-secondary font-bold mb-2 leading-tight">Comida & Acessórios Pet</h3>
                     </div>
-                    <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779166470/gato-esfomeado_juzklz.webp" alt="Gato Esfomeado" class="absolute right-0 top-0 h-full w-auto object-contain z-0 group-hover:scale-105 transition-transform origin-top-right">
+                    <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto,f_auto,w_300/v1779166470/gato-esfomeado_juzklz.webp" alt="Gato Esfomeado" class="absolute right-0 top-0 h-full w-auto object-contain z-0 group-hover:scale-105 transition-transform origin-top-right" loading="lazy" decoding="async">
                 </div>
                 
                 <!-- Banner 2 -->
@@ -215,7 +204,7 @@
                         <h3 class="text-primary text-2xl font-extrabold mb-1">30%</h3>
                         <p class="text-white text-xs font-bold mb-2">Desconto Hoje</p>
                     </div>
-                    <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779166996/babyboomeer_zcehf8.webp" alt="Cachorro de Oferta" class="absolute right-2 bottom-0 h-[90%] w-auto object-contain z-0 group-hover:scale-105 transition-transform origin-bottom-right">
+                    <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto,f_auto,w_300/v1779166996/babyboomeer_zcehf8.webp" alt="Cachorro de Oferta" class="absolute right-2 bottom-0 h-[90%] w-auto object-contain z-0 group-hover:scale-105 transition-transform origin-bottom-right" loading="lazy" decoding="async">
                 </div>
 
                 <!-- Banner 3 -->
@@ -224,7 +213,7 @@
                         <h3 class="text-secondary text-xl font-bold mb-1 leading-tight">Ração<br>para<br>Pássaros</h3>
                         <p class="text-secondary/80 text-xs mb-3">Mistura Premium</p>
                     </div>
-                    <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779167767/parrotinhos_nik2vl.webp" alt="Pássaros de Oferta" class="absolute right-0 bottom-0 h-[85%] w-auto object-contain z-0 group-hover:scale-105 transition-transform origin-bottom-right">
+                    <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto,f_auto,w_300/v1779167767/parrotinhos_nik2vl.webp" alt="Pássaros de Oferta" class="absolute right-0 bottom-0 h-[85%] w-auto object-contain z-0 group-hover:scale-105 transition-transform origin-bottom-right" loading="lazy" decoding="async">
                 </div>
 
                 <!-- Banner 4 -->
@@ -234,7 +223,7 @@
                         <h3 class="text-2xl font-extrabold mb-1">25%</h3>
                         <p class="text-xs font-bold mb-3">Na Loja Toda</p>
                     </div>
-                    <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779168905/cachorrinhomordedor_1_fh0dau.webp" alt="Cachorrinhos Mordedor" class="absolute -right-2 bottom-0 h-[72%] w-auto object-contain z-0 group-hover:scale-105 transition-transform origin-bottom-right">
+                    <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto,f_auto,w_300/v1779168905/cachorrinhomordedor_1_fh0dau.webp" alt="Cachorrinhos Mordedor" class="absolute -right-2 bottom-0 h-[72%] w-auto object-contain z-0 group-hover:scale-105 transition-transform origin-bottom-right" loading="lazy" decoding="async">
             </div>
         </div>
     </div>
@@ -327,7 +316,7 @@
                 <div class="w-full lg:w-1/2 flex flex-col gap-3">
                     <!-- Main Image -->
                     <div class="w-full h-64 md:h-[350px] rounded-3xl overflow-hidden shadow-lg relative bg-lightbg group border border-gray-100">
-                        <img id="gallery-main" src="https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779203787/petshopt3_zbttsv.webp" class="w-full h-full object-cover object-center transition-opacity duration-300" alt="Espaço CreativzPet">
+                        <img id="gallery-main" src="https://res.cloudinary.com/do789aovx/image/upload/q_auto,f_auto,w_800/v1779203787/petshopt3_zbttsv.webp" class="w-full h-full object-cover object-center transition-opacity duration-300" alt="Espaço CreativzPet" loading="lazy" decoding="async">
                         
                         <!-- Navigation Arrows -->
                         <button onclick="prevGalleryImage()" class="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 md:w-10 md:h-10 bg-white/90 hover:bg-white backdrop-blur-sm rounded-full flex items-center justify-center text-secondary hover:text-primary transition-all shadow-md hover:scale-105 active:scale-95 z-20 cursor-pointer" aria-label="Imagem Anterior">
@@ -340,19 +329,19 @@
                     <!-- Thumbnails -->
                     <div class="grid grid-cols-5 gap-2 md:gap-3" id="gallery-thumbs">
                         <div class="aspect-[4/3] rounded-xl overflow-hidden cursor-pointer border-2 border-primary transition-all gallery-thumb shadow-md" onclick="setGalleryImage(0)">
-                            <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779203787/petshopt3_zbttsv.webp" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                            <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto,f_auto,w_150/v1779203787/petshopt3_zbttsv.webp" class="w-full h-full object-cover hover:scale-105 transition duration-500" loading="lazy" decoding="async">
                         </div>
                         <div class="aspect-[4/3] rounded-xl overflow-hidden cursor-pointer border-2 border-transparent opacity-50 hover:opacity-100 transition-all gallery-thumb shadow-sm" onclick="setGalleryImage(1)">
-                            <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779203787/petshopt5_lsobns.webp" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                            <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto,f_auto,w_150/v1779203787/petshopt5_lsobns.webp" class="w-full h-full object-cover hover:scale-105 transition duration-500" loading="lazy" decoding="async">
                         </div>
                         <div class="aspect-[4/3] rounded-xl overflow-hidden cursor-pointer border-2 border-transparent opacity-50 hover:opacity-100 transition-all gallery-thumb shadow-sm" onclick="setGalleryImage(2)">
-                            <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779203787/petshopt4_mjtwgk.webp" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                            <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto,f_auto,w_150/v1779203787/petshopt4_mjtwgk.webp" class="w-full h-full object-cover hover:scale-105 transition duration-500" loading="lazy" decoding="async">
                         </div>
                         <div class="aspect-[4/3] rounded-xl overflow-hidden cursor-pointer border-2 border-transparent opacity-50 hover:opacity-100 transition-all gallery-thumb shadow-sm" onclick="setGalleryImage(3)">
-                            <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779203787/petshopt2_y8eciu.webp" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                            <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto,f_auto,w_150/v1779203787/petshopt2_y8eciu.webp" class="w-full h-full object-cover hover:scale-105 transition duration-500" loading="lazy" decoding="async">
                         </div>
                         <div class="aspect-[4/3] rounded-xl overflow-hidden cursor-pointer border-2 border-transparent opacity-50 hover:opacity-100 transition-all gallery-thumb shadow-sm" onclick="setGalleryImage(4)">
-                            <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779203786/petshopt1_tkswdo.webp" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                            <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto,f_auto,w_150/v1779203786/petshopt1_tkswdo.webp" class="w-full h-full object-cover hover:scale-105 transition duration-500" loading="lazy" decoding="async">
                         </div>
                     </div>
                 </div>
@@ -381,7 +370,7 @@
                         <div class="relative z-10 flex flex-col justify-between h-full w-full">
                             <div>
                                 <div class="flex items-center gap-3 mb-4">
-                                    <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779205560/download_7_mo9ay6.jpg" class="w-12 h-12 rounded-full object-cover">
+                                    <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto,f_auto,w_100/v1779205560/download_7_mo9ay6.jpg" class="w-12 h-12 rounded-full object-cover" loading="lazy" decoding="async">
                                     <div>
                                         <h4 class="font-bold text-white text-sm">Ana & Thor</h4>
                                         <div class="flex text-yellow-400 text-[10px]">
@@ -405,7 +394,7 @@
                         <div class="relative z-10 flex flex-col justify-between h-full w-full">
                             <div>
                                 <div class="flex items-center gap-3 mb-4">
-                                    <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779205560/111111_em1jlq.webp" class="w-12 h-12 rounded-full object-cover">
+                                    <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto,f_auto,w_100/v1779205560/111111_em1jlq.webp" class="w-12 h-12 rounded-full object-cover" loading="lazy" decoding="async">
                                     <div>
                                         <h4 class="font-bold text-white text-sm">Carlos & Luna</h4>
                                         <div class="flex text-yellow-400 text-[10px]">
@@ -429,7 +418,7 @@
                         <div class="relative z-10 flex flex-col justify-between h-full w-full">
                             <div>
                                 <div class="flex items-center gap-3 mb-4">
-                                    <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779205560/222222_uwreuk.webp" class="w-12 h-12 rounded-full object-cover">
+                                    <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto,f_auto,w_100/v1779205560/222222_uwreuk.webp" class="w-12 h-12 rounded-full object-cover" loading="lazy" decoding="async">
                                     <div>
                                         <h4 class="font-bold text-white text-sm">Mariana & Bob</h4>
                                         <div class="flex text-yellow-400 text-[10px]">
@@ -453,7 +442,7 @@
                         <div class="relative z-10 flex flex-col justify-between h-full w-full">
                             <div>
                                 <div class="flex items-center gap-3 mb-4">
-                                    <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779205560/333333_qjd24t.webp" class="w-12 h-12 rounded-full object-cover">
+                                    <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto,f_auto,w_100/v1779205560/333333_qjd24t.webp" class="w-12 h-12 rounded-full object-cover" loading="lazy" decoding="async">
                                     <div>
                                         <h4 class="font-bold text-white text-sm">João & Pipoca</h4>
                                         <div class="flex text-yellow-400 text-[10px]">
@@ -477,7 +466,7 @@
                         <div class="relative z-10 flex flex-col justify-between h-full w-full">
                             <div>
                                 <div class="flex items-center gap-3 mb-4">
-                                    <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779205560/444444_qgjtgp.webp" class="w-12 h-12 rounded-full object-cover">
+                                    <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto,f_auto,w_100/v1779205560/444444_qgjtgp.webp" class="w-12 h-12 rounded-full object-cover" loading="lazy" decoding="async">
                                     <div>
                                         <h4 class="font-bold text-white text-sm">Patrícia & Max</h4>
                                         <div class="flex text-yellow-400 text-[10px]">
@@ -648,7 +637,7 @@
                 <!-- Col 1: Logo e Resumo -->
                 <div>
                     <div class="flex items-center mb-6">
-                        <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779170697/Logo-_-Icon-Creativzlab-_For-LigthBG__zl2sl6.webp" alt="CreativzPet Logo" class="h-8 w-auto object-contain drop-shadow-sm">
+                        <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto,f_auto,w_200/v1779170697/Logo-_-Icon-Creativzlab-_For-LigthBG__zl2sl6.webp" alt="CreativzPet Logo" class="h-8 w-auto object-contain drop-shadow-sm" loading="lazy" decoding="async">
                     </div>
                     <p class="text-gray text-sm leading-relaxed max-w-sm">
                         A melhor clínica e pet shop da região, oferecendo um cuidado "Fear Free" e humanizado para o seu melhor amigo.
@@ -685,94 +674,8 @@
     </footer>
 
 
-    <!-- Script for Mobile Menu & Gallery -->
-    <script>
-        // Mobile Menu
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        if (menuBtn && mobileMenu) {
-            menuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-        }
-
-        // Gallery Logic
-        const galleryImages = [
-            "https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779203787/petshopt3_zbttsv.webp",
-            "https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779203787/petshopt5_lsobns.webp",
-            "https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779203787/petshopt4_mjtwgk.webp",
-            "https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779203787/petshopt2_y8eciu.webp",
-            "https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779203786/petshopt1_tkswdo.webp"
-        ];
-        let currentGalleryIndex = 0;
-        const mainImg = document.getElementById('gallery-main');
-        const thumbs = document.querySelectorAll('.gallery-thumb');
-        let galleryInterval;
-
-        // Expose functions to global scope so inline onclick attributes work correctly
-        window.setGalleryImage = function(index) {
-            currentGalleryIndex = index;
-            mainImg.style.opacity = 0;
-            setTimeout(() => {
-                mainImg.src = galleryImages[index];
-                
-                // Keep the "woman bathing dog" image aligned to the left so it crops properly (now index 4)
-                if (index === 4) {
-                    mainImg.className = "w-full h-full object-cover object-left transition-opacity duration-300";
-                } else {
-                    mainImg.className = "w-full h-full object-cover object-center transition-opacity duration-300";
-                }
-                
-                mainImg.style.opacity = 1;
-            }, 300);
-
-            thumbs.forEach((thumb, i) => {
-                if (i === index) {
-                    thumb.classList.add('border-primary', 'opacity-100');
-                    thumb.classList.remove('border-transparent', 'opacity-50');
-                } else {
-                    thumb.classList.remove('border-primary', 'opacity-100');
-                    thumb.classList.add('border-transparent', 'opacity-50');
-                }
-            });
-            resetGalleryInterval();
-        };
-
-        window.prevGalleryImage = function() {
-            let prevIndex = (currentGalleryIndex - 1 + galleryImages.length) % galleryImages.length;
-            window.setGalleryImage(prevIndex);
-        };
-
-        window.nextGalleryImage = function() {
-            let nextIndex = (currentGalleryIndex + 1) % galleryImages.length;
-            window.setGalleryImage(nextIndex);
-        };
-
-        function resetGalleryInterval() {
-            clearInterval(galleryInterval);
-            galleryInterval = setInterval(window.nextGalleryImage, 4000);
-        }
-
-        // Start auto-play
-        resetGalleryInterval();
-
-        // Categories Horizontal Scroll Navigation
-        const catContainer = document.getElementById('categories-container');
-        const catScrollLeft = document.getElementById('cat-scroll-left');
-        const catScrollRight = document.getElementById('cat-scroll-right');
-        
-        if (catContainer && catScrollLeft && catScrollRight) {
-            catScrollLeft.addEventListener('click', (e) => {
-                e.preventDefault();
-                catContainer.scrollBy({ left: -260, behavior: 'smooth' });
-            });
-            catScrollRight.addEventListener('click', (e) => {
-                e.preventDefault();
-                catContainer.scrollBy({ left: 260, behavior: 'smooth' });
-            });
-        }
-    </script>
+    <!-- Script for Mobile Menu & Gallery (Minified & Optimized) -->
+    <script>const menuBtn=document.getElementById("menu-btn"),mobileMenu=document.getElementById("mobile-menu");menuBtn&&mobileMenu&&menuBtn.addEventListener("click",()=>{mobileMenu.classList.toggle("hidden")});const galleryImages=["https://res.cloudinary.com/do789aovx/image/upload/q_auto,f_auto,w_800/v1779203787/petshopt3_zbttsv.webp","https://res.cloudinary.com/do789aovx/image/upload/q_auto,f_auto,w_800/v1779203787/petshopt5_lsobns.webp","https://res.cloudinary.com/do789aovx/image/upload/q_auto,f_auto,w_800/v1779203787/petshopt4_mjtwgk.webp","https://res.cloudinary.com/do789aovx/image/upload/q_auto,f_auto,w_800/v1779203787/petshopt2_y8eciu.webp","https://res.cloudinary.com/do789aovx/image/upload/q_auto,f_auto,w_800/v1779203786/petshopt1_tkswdo.webp"];let currentGalleryIndex=0;const mainImg=document.getElementById("gallery-main"),thumbs=document.querySelectorAll(".gallery-thumb");let galleryInterval;window.setGalleryImage=function(e){currentGalleryIndex=e,mainImg.style.opacity=0,setTimeout(()=>{mainImg.src=galleryImages[e],mainImg.className=4===e?"w-full h-full object-cover object-left transition-opacity duration-300":"w-full h-full object-cover object-center transition-opacity duration-300",mainImg.style.opacity=1},300),thumbs.forEach((t,n)=>{n===e?(t.classList.add("border-primary","opacity-100"),t.classList.remove("border-transparent","opacity-50")):(t.classList.remove("border-primary","opacity-100"),t.classList.add("border-transparent","opacity-50"))}),resetGalleryInterval()},window.prevGalleryImage=function(){let e=(currentGalleryIndex-1+galleryImages.length)%galleryImages.length;window.setGalleryImage(e)},window.nextGalleryImage=function(){let e=(currentGalleryIndex+1)%galleryImages.length;window.setGalleryImage(e)};function resetGalleryInterval(){clearInterval(galleryInterval),galleryInterval=setInterval(window.nextGalleryImage,4e3)}resetGalleryInterval();const catContainer=document.getElementById("categories-container"),catScrollLeft=document.getElementById("cat-scroll-left"),catScrollRight=document.getElementById("cat-scroll-right");catContainer&&catScrollLeft&&catScrollRight&&(catScrollLeft.addEventListener("click",e=>{e.preventDefault(),catContainer.scrollBy({left:-260,behavior:`smooth`})}),catScrollRight.addEventListener("click",e=>{e.preventDefault(),catContainer.scrollBy({left:260,behavior:`smooth`})}));</script>
 
     
     <!-- WhatsApp Floating Button -->
@@ -782,7 +685,28 @@
         </svg>
     </a>
 
-    <!-- GoHighLevel Chat Widget -->
-    <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a0cd3550732dc5e3f0ce3da"></script>
+    <!-- GoHighLevel Chat Widget Deferral Script -->
+    <script>
+        (function() {
+            function loadGHLWidget() {
+                if (window.ghlWidgetLoaded) return;
+                window.ghlWidgetLoaded = true;
+                const script = document.createElement('script');
+                script.src = "https://widgets.leadconnectorhq.com/loader.js";
+                script.setAttribute('data-resources-url', "https://widgets.leadconnectorhq.com/chat-widget/loader.js");
+                script.setAttribute('data-widget-id', "6a0cd3550732dc5e3f0ce3da");
+                script.async = true;
+                document.body.appendChild(script);
+            }
+            
+            const interactionEvents = ['mouseover', 'keydown', 'touchstart', 'scroll'];
+            function triggerGHL() {
+                loadGHLWidget();
+                interactionEvents.forEach(e => window.removeEventListener(e, triggerGHL));
+            }
+            interactionEvents.forEach(e => window.addEventListener(e, triggerGHL, { passive: true }));
+            setTimeout(loadGHLWidget, 3500);
+        })();
+    </script>
 </body>
 </html>
