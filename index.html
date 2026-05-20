@@ -29,22 +29,7 @@
             }
         }
     </script>
-    <style>body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:#6b7280;background-color:#f2f4f7}h1,h2,h3,h4,h5,h6{color:#0b1b3f;font-weight:700}.placeholder-img{background-color:#e2e8f0;display:flex;align-items:center;justify-content:center;color:#94a3b8;font-weight:700;text-align:center}.hide-scrollbar::-webkit-scrollbar{display:none}.hide-scrollbar{-ms-overflow-style:none;scrollbar-width:none}@keyframes marquee{0%{transform:translateX(0%)}100%{transform:translateX(-50%)}}.animate-marquee{animation:marquee 90s linear infinite}.animate-marquee:hover{animation-play-state:paused}
-    /* Força bruta no primeiro widget injetado (Coloque o script de Telefone ANTES do script de Chat no HTML) */
-    chat-widget:nth-of-type(1), chat-widget.voice-call-widget {
-        position: fixed !important;
-        bottom: 100px !important;
-        right: 20px !important;
-        z-index: 99999 !important;
-    }
-    /* Força bruta no segundo widget injetado (Script do Chat) */
-    chat-widget:nth-of-type(2), chat-widget.standard-chat-widget {
-        position: fixed !important;
-        bottom: 20px !important;
-        right: 20px !important;
-        z-index: 99998 !important;
-    }
-    .btn-chamada-ativa-simples{background-color:#ff3b30!important;color:white!important;border-color:#ff3b30!important;font-weight:bold!important}@keyframes double-wave{0%{box-shadow:0 0 0 0 rgba(37,211,102,0.6),0 0 0 0 rgba(37,211,102,0.3)}100%{box-shadow:0 0 0 10px rgba(37,211,102,0),0 0 0 20px rgba(37,211,102,0)}}.animate-double-wave{animation:double-wave 3s infinite ease-out}@keyframes float{0%{transform:translateY(0px)}50%{transform:translateY(-8px)}100%{transform:translateY(0px)}}.animate-float{animation:float 4s ease-in-out infinite}.animate-float-delay-1{animation:float 4.5s ease-in-out infinite 1s}.animate-float-delay-2{animation:float 5s ease-in-out infinite 2s}</style>
+    <style>body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:#6b7280;background-color:#f2f4f7}h1,h2,h3,h4,h5,h6{color:#0b1b3f;font-weight:700}.placeholder-img{background-color:#e2e8f0;display:flex;align-items:center;justify-content:center;color:#94a3b8;font-weight:700;text-align:center}.hide-scrollbar::-webkit-scrollbar{display:none}.hide-scrollbar{-ms-overflow-style:none;scrollbar-width:none}@keyframes marquee{0%{transform:translateX(0%)}100%{transform:translateX(-50%)}}.animate-marquee{animation:marquee 90s linear infinite}.animate-marquee:hover{animation-play-state:paused}.btn-chamada-ativa-simples{background-color:#ff3b30!important;color:white!important;border-color:#ff3b30!important;font-weight:bold!important}@keyframes double-wave{0%{box-shadow:0 0 0 0 rgba(37,211,102,0.6),0 0 0 0 rgba(37,211,102,0.3)}100%{box-shadow:0 0 0 10px rgba(37,211,102,0),0 0 0 20px rgba(37,211,102,0)}}.animate-double-wave{animation:double-wave 3s infinite ease-out}@keyframes float{0%{transform:translateY(0px)}50%{transform:translateY(-8px)}100%{transform:translateY(0px)}}.animate-float{animation:float 4s ease-in-out infinite}.animate-float-delay-1{animation:float 4.5s ease-in-out infinite 1s}.animate-float-delay-2{animation:float 5s ease-in-out infinite 2s}</style>
 </head>
 <body class="antialiased overflow-x-hidden bg-secondary">
 
@@ -732,117 +717,15 @@
 
 
 
-    <!-- Widget: Ligação por Voz (Telefone) - DEVE VIR PRIMEIRO -->
-    <div data-chat-widget data-widget-id="6a0d50834d25f28501effbe6" data-location-id="EmTYdhwsl14rtOkywLwY"></div>
+    <!-- Widget: Ligação por Voz (Telefone) -->
     <script src="https://widgets.leadconnectorhq.com/loader.js"
             data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
             data-widget-id="6a0d50834d25f28501effbe6"></script>
 
-    <!-- Widget: Chat Standard - DEVE VIR SEGUNDO -->
+    <!-- Widget: Chat Standard -->
     <script src="https://widgets.leadconnectorhq.com/loader.js"
             data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
             data-widget-id="6a0cd3550732dc5e3f0ce3da"></script>
-
-    <!-- MODO HARD: Força bruta na posição dos widgets via JS com polling -->
-    <script>
-        let tentativas = 0;
-        let modoHard = setInterval(function() {
-            let widgets = document.querySelectorAll('chat-widget');
-            if (widgets.length >= 2) {
-                widgets[0].style.cssText = "position: fixed !important; bottom: 100px !important; right: 20px !important; z-index: 99999 !important;";
-                widgets[1].style.cssText = "position: fixed !important; bottom: 20px !important; right: 20px !important; z-index: 99998 !important;";
-                console.log("MODO HARD: Botões separados com sucesso!");
-                clearInterval(modoHard);
-            }
-            tentativas++;
-            if (tentativas > 20) clearInterval(modoHard);
-        }, 500);
-    </script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-
-            // --- Integração Visual: Ajustar posição dos widgets e empilhá-los ---
-            function applyShadowStyles(widget) {
-                const inject = () => {
-                    if (widget.shadowRoot) {
-                        if (widget.shadowRoot.querySelector('#custom-position-style')) return;
-                        
-                        const styleTag = document.createElement('style');
-                        styleTag.id = 'custom-position-style';
-                        // Reabilita o clique dentro da shadow dom, já que o host element está com pointer-events: none
-                        styleTag.textContent = `
-                            * {
-                                pointer-events: auto !important;
-                            }
-                        `;
-                        widget.shadowRoot.appendChild(styleTag);
-                    }
-                };
-                
-                inject();
-                
-                let shadowPolls = 0;
-                const shadowInterval = setInterval(() => {
-                    shadowPolls++;
-                    if (widget.shadowRoot) {
-                        clearInterval(shadowInterval);
-                        inject();
-                    }
-                    if (shadowPolls > 40) clearInterval(shadowInterval);
-                }, 100);
-            }
-
-            // Classify widget
-            function classifyWidget(widget) {
-                const widgetId = widget.getAttribute('widget-id') || 
-                                 widget.getAttribute('data-widget-id') || 
-                                 widget.getAttribute('widgetid') || '';
-                
-                if (widgetId === '6a0d50834d25f28501effbe6') {
-                    widget.classList.add('voice-call-widget');
-                    applyShadowStyles(widget);
-                } else if (widgetId === '6a0cd3550732dc5e3f0ce3da') {
-                    widget.classList.add('standard-chat-widget');
-                    applyShadowStyles(widget);
-                } else {
-                    let attempts = 0;
-                    const idInterval = setInterval(() => {
-                        attempts++;
-                        const currentId = widget.getAttribute('widget-id') || 
-                                          widget.getAttribute('data-widget-id') || 
-                                          widget.getAttribute('widgetid') || '';
-                        if (currentId) {
-                            clearInterval(idInterval);
-                            if (currentId === '6a0d50834d25f28501effbe6') {
-                                widget.classList.add('voice-call-widget');
-                                applyShadowStyles(widget);
-                            } else if (currentId === '6a0cd3550732dc5e3f0ce3da') {
-                                widget.classList.add('standard-chat-widget');
-                                applyShadowStyles(widget);
-                            }
-                        }
-                        if (attempts > 30) clearInterval(idInterval);
-                    }, 100);
-                }
-            }
-
-            // Classifica elementos já existentes no carregamento
-            document.querySelectorAll('chat-widget').forEach(classifyWidget);
-
-            // Observa novas injeções dinâmicas de widgets
-            const widgetObserver = new MutationObserver((mutations) => {
-                for (const mutation of mutations) {
-                    for (const addedNode of mutation.addedNodes) {
-                        if (addedNode.tagName && addedNode.tagName.toLowerCase() === 'chat-widget') {
-                            classifyWidget(addedNode);
-                        }
-                    }
-                }
-            });
-            widgetObserver.observe(document.body, { childList: true, subtree: true });
-        });
-    </script>
 
 </body>
 </html>
