@@ -70,11 +70,19 @@
 <body class="antialiased overflow-x-hidden bg-secondary">
     <!-- SVG Template para Patinhas -->
     <svg class="hidden" xmlns="http://www.w3.org/2000/svg">
-        <symbol id="paw-icon" viewBox="0 0 512 512">
-            <path fill="currentColor" d="M256 224c53 0 96-43 96-96s-93-96-96-96s-96 43-96 96s43 96 96 96zm-96-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm336 0c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm-24 168c-11-8-25.8-9.4-38.2-3.7l-41.6 19.2c-15.5 7.2-25.2 23-24.2 40.1c1.3 22.3 12.8 42.4 30.7 54.9c16.3 11.4 37 12 53.9 1.4c21.8-13.6 30.5-41.3 20.3-65.1l-10.9-26.8zm-280.8-3.7c-12.4-5.7-27.2-4.3-38.2 3.7l-10.9 26.8c-10.2 23.8-1.5 51.5 20.3 65.1c16.9 10.6 37.6 10 53.9-1.4c17.9-12.5 29.4-32.6 30.7-54.9c1-17.1-8.7-32.9-24.2-40.1l-41.6-19.2zM256 480c58.2 0 109.1-34.9 130.6-84.9c7.2-16.7.2-36.2-16.1-44.5l-44.8-22.9c-15.5-7.9-34.3-4.5-46 8.3L256 363.3l-24.7-27.3c-11.7-12.8-30.5-16.2-46-8.3l-44.8 22.9c-16.3 8.3-23.3 27.8-16.1 44.5C146.9 445.1 197.8 480 256 480z"/>
+        <symbol id="paw-icon" viewBox="0 0 100 100">
+            <!-- Toes -->
+            <circle cx="24" cy="34" r="11" fill="currentColor"/>
+            <circle cx="41" cy="18" r="12.5" fill="currentColor"/>
+            <circle cx="59" cy="18" r="12.5" fill="currentColor"/>
+            <circle cx="76" cy="34" r="11" fill="currentColor"/>
+            <!-- Central Pad -->
+            <ellipse cx="50" cy="58" rx="22" ry="16" fill="currentColor"/>
+            <circle cx="37" cy="66" r="11.5" fill="currentColor"/>
+            <circle cx="63" cy="66" r="11.5" fill="currentColor"/>
         </symbol>
     </svg>
-    <!-- Topbar (Static) -->
+    <!-- Topbar (Static) -->
     <div class="bg-gradient-to-r from-red-600 via-rose-600 to-red-800 text-white text-xs py-2.5 border-b border-white/10 shadow-sm">
         <div class="container max-w-6xl mx-auto px-4 lg:px-8 flex justify-center items-center text-center">
             <span class="font-bold tracking-wide text-[11px] md:text-xs text-white">
@@ -188,12 +196,12 @@
     <!-- Hero Section -->
     <section class="relative bg-secondary pt-2 pb-0 lg:pt-3 lg:pb-0 overflow-visible">
         <!-- Patinhas de Fundo (White Paws) -->
-        <svg class="absolute left-1 md:-left-4 top-[15%] w-7 h-7 pointer-events-none z-0 text-white opacity-[0.08]" style="transform: rotate(20deg);"><use href="#paw-icon"></use></svg>
-        <svg class="absolute left-6 md:left-2 top-[23%] w-7 h-7 pointer-events-none z-0 text-white opacity-[0.08]" style="transform: rotate(35deg);"><use href="#paw-icon"></use></svg>
-        <svg class="absolute left-2 md:-left-2 top-[31%] w-7 h-7 pointer-events-none z-0 text-white opacity-[0.08]" style="transform: rotate(15deg);"><use href="#paw-icon"></use></svg>
-        <svg class="absolute right-1 md:-right-4 top-[60%] w-7 h-7 pointer-events-none z-0 text-white opacity-[0.08]" style="transform: rotate(-20deg);"><use href="#paw-icon"></use></svg>
-        <svg class="absolute right-6 md:right-2 top-[68%] w-7 h-7 pointer-events-none z-0 text-white opacity-[0.08]" style="transform: rotate(-35deg);"><use href="#paw-icon"></use></svg>
-        <svg class="absolute right-2 md:-right-2 top-[76%] w-7 h-7 pointer-events-none z-0 text-white opacity-[0.08]" style="transform: rotate(-15deg);"><use href="#paw-icon"></use></svg>
+        <svg class="absolute left-1 md:-left-4 top-[15%] w-7 h-7 pointer-events-none z-0 text-white opacity-[0.12]" style="transform: rotate(20deg);"><use href="#paw-icon"></use></svg>
+        <svg class="absolute left-6 md:left-2 top-[23%] w-7 h-7 pointer-events-none z-0 text-white opacity-[0.12]" style="transform: rotate(35deg);"><use href="#paw-icon"></use></svg>
+        <svg class="absolute left-2 md:-left-2 top-[31%] w-7 h-7 pointer-events-none z-0 text-white opacity-[0.12]" style="transform: rotate(15deg);"><use href="#paw-icon"></use></svg>
+        <svg class="absolute right-1 md:-right-4 top-[60%] w-7 h-7 pointer-events-none z-0 text-white opacity-[0.12]" style="transform: rotate(-20deg);"><use href="#paw-icon"></use></svg>
+        <svg class="absolute right-6 md:right-2 top-[68%] w-7 h-7 pointer-events-none z-0 text-white opacity-[0.12]" style="transform: rotate(-35deg);"><use href="#paw-icon"></use></svg>
+        <svg class="absolute right-2 md:-right-2 top-[76%] w-7 h-7 pointer-events-none z-0 text-white opacity-[0.12]" style="transform: rotate(-15deg);"><use href="#paw-icon"></use></svg>
         <!-- Fundo com Azul Escuro na Esquerda e Luz Forte na Direita -->
         <div class="absolute inset-0 bg-gradient-to-r from-[#0B1B3F] via-[#0B1B3F] to-transparent pointer-events-none z-0"></div>
         <div class="absolute top-[-10%] right-0 w-full sm:w-[120%] lg:w-[70%] h-[120%] bg-[radial-gradient(ellipse_at_center_right,rgba(0,174,239,0.35)_0%,transparent_70%)] pointer-events-none z-0"></div>
@@ -318,9 +326,9 @@
     <!-- Banners Section -->
     <section class="relative z-20">
         <!-- Patinhas de Fundo (Blue Paws - Esquerda) -->
-        <svg class="absolute left-1 md:-left-4 top-[20%] w-7 h-7 pointer-events-none z-0 text-primary opacity-[0.08]" style="transform: rotate(20deg);"><use href="#paw-icon"></use></svg>
-        <svg class="absolute left-6 md:left-2 top-[50%] w-7 h-7 pointer-events-none z-0 text-primary opacity-[0.08]" style="transform: rotate(35deg);"><use href="#paw-icon"></use></svg>
-        <svg class="absolute left-2 md:-left-2 top-[80%] w-7 h-7 pointer-events-none z-0 text-primary opacity-[0.08]" style="transform: rotate(15deg);"><use href="#paw-icon"></use></svg>
+        <svg class="absolute left-1 md:-left-4 top-[20%] w-7 h-7 pointer-events-none z-0 text-primary opacity-[0.16]" style="transform: rotate(20deg);"><use href="#paw-icon"></use></svg>
+        <svg class="absolute left-6 md:left-2 top-[50%] w-7 h-7 pointer-events-none z-0 text-primary opacity-[0.16]" style="transform: rotate(35deg);"><use href="#paw-icon"></use></svg>
+        <svg class="absolute left-2 md:-left-2 top-[80%] w-7 h-7 pointer-events-none z-0 text-primary opacity-[0.16]" style="transform: rotate(15deg);"><use href="#paw-icon"></use></svg>
         <div class="container max-w-6xl mx-auto px-4 lg:px-8">
             <!-- Big Discount Banner -->
             <div id="ofertas" class="bg-secondary rounded-[3rem] px-8 py-8 relative overflow-visible flex flex-col md:flex-row items-center justify-between shadow-2xl mt-16 mb-16">
@@ -397,9 +405,9 @@
     <!-- Browse By Categories -->
     <section id="nossos-servicos" class="relative bg-white pt-16 pb-10 overflow-hidden">
         <!-- Patinhas de Fundo (Blue Paws - Direita) -->
-        <svg class="absolute right-1 md:-right-4 top-[20%] w-7 h-7 pointer-events-none z-0 text-primary opacity-[0.08]" style="transform: rotate(-20deg);"><use href="#paw-icon"></use></svg>
-        <svg class="absolute right-6 md:right-2 top-[50%] w-7 h-7 pointer-events-none z-0 text-primary opacity-[0.08]" style="transform: rotate(-35deg);"><use href="#paw-icon"></use></svg>
-        <svg class="absolute right-2 md:-right-2 top-[80%] w-7 h-7 pointer-events-none z-0 text-primary opacity-[0.08]" style="transform: rotate(-15deg);"><use href="#paw-icon"></use></svg>
+        <svg class="absolute right-1 md:-right-4 top-[20%] w-7 h-7 pointer-events-none z-0 text-primary opacity-[0.16]" style="transform: rotate(-20deg);"><use href="#paw-icon"></use></svg>
+        <svg class="absolute right-6 md:right-2 top-[50%] w-7 h-7 pointer-events-none z-0 text-primary opacity-[0.16]" style="transform: rotate(-35deg);"><use href="#paw-icon"></use></svg>
+        <svg class="absolute right-2 md:-right-2 top-[80%] w-7 h-7 pointer-events-none z-0 text-primary opacity-[0.16]" style="transform: rotate(-15deg);"><use href="#paw-icon"></use></svg>
         
         <div class="container max-w-6xl mx-auto px-4 lg:px-8 relative z-10">
             <!-- Pre-headline Tag igual a da Sessao 1 -->
@@ -512,14 +520,14 @@
         <!-- Wrapper Escuro que engloba Sobre Nós e Prova Social -->
         <div class="w-full bg-white py-16 relative overflow-hidden">
             <!-- Patinhas de Fundo (Blue Paws - Sobre Nós - Esquerda) -->
-            <svg class="absolute left-1 md:-left-4 top-[15%] w-7 h-7 pointer-events-none z-0 text-primary opacity-[0.08]" style="transform: rotate(20deg);"><use href="#paw-icon"></use></svg>
-            <svg class="absolute left-6 md:left-2 top-[23%] w-7 h-7 pointer-events-none z-0 text-primary opacity-[0.08]" style="transform: rotate(35deg);"><use href="#paw-icon"></use></svg>
-            <svg class="absolute left-2 md:-left-2 top-[31%] w-7 h-7 pointer-events-none z-0 text-primary opacity-[0.08]" style="transform: rotate(15deg);"><use href="#paw-icon"></use></svg>
+            <svg class="absolute left-1 md:-left-4 top-[15%] w-7 h-7 pointer-events-none z-0 text-primary opacity-[0.16]" style="transform: rotate(20deg);"><use href="#paw-icon"></use></svg>
+            <svg class="absolute left-6 md:left-2 top-[23%] w-7 h-7 pointer-events-none z-0 text-primary opacity-[0.16]" style="transform: rotate(35deg);"><use href="#paw-icon"></use></svg>
+            <svg class="absolute left-2 md:-left-2 top-[31%] w-7 h-7 pointer-events-none z-0 text-primary opacity-[0.16]" style="transform: rotate(15deg);"><use href="#paw-icon"></use></svg>
 
             <!-- Patinhas de Fundo (Blue Paws - Reviews - Direita) -->
-            <svg class="absolute right-1 md:-right-4 top-[60%] w-7 h-7 pointer-events-none z-0 text-primary opacity-[0.08]" style="transform: rotate(-20deg);"><use href="#paw-icon"></use></svg>
-            <svg class="absolute right-6 md:right-2 top-[68%] w-7 h-7 pointer-events-none z-0 text-primary opacity-[0.08]" style="transform: rotate(-35deg);"><use href="#paw-icon"></use></svg>
-            <svg class="absolute right-2 md:-right-2 top-[76%] w-7 h-7 pointer-events-none z-0 text-primary opacity-[0.08]" style="transform: rotate(-15deg);"><use href="#paw-icon"></use></svg>
+            <svg class="absolute right-1 md:-right-4 top-[60%] w-7 h-7 pointer-events-none z-0 text-primary opacity-[0.16]" style="transform: rotate(-20deg);"><use href="#paw-icon"></use></svg>
+            <svg class="absolute right-6 md:right-2 top-[68%] w-7 h-7 pointer-events-none z-0 text-primary opacity-[0.16]" style="transform: rotate(-35deg);"><use href="#paw-icon"></use></svg>
+            <svg class="absolute right-2 md:-right-2 top-[76%] w-7 h-7 pointer-events-none z-0 text-primary opacity-[0.16]" style="transform: rotate(-15deg);"><use href="#paw-icon"></use></svg>
             <!-- Grid com luz azul (mesmo efeito da Seção 1, adaptado para fundo branco) -->
             <div class="absolute inset-0 pointer-events-none z-0" style="background-image: linear-gradient(rgba(0,174,239,0.10) 1px, transparent 1px), linear-gradient(90deg, rgba(0,174,239,0.10) 1px, transparent 1px); background-size: 40px 40px; -webkit-mask-image: radial-gradient(ellipse 70% 70% at 20% 50%, black 30%, transparent 80%); mask-image: radial-gradient(ellipse 70% 70% at 20% 50%, black 30%, transparent 80%);"></div>
             <div class="absolute left-[-5%] top-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[radial-gradient(ellipse_at_center,rgba(0,174,239,0.18)_0%,transparent_65%)] pointer-events-none z-0"></div>
@@ -718,9 +726,9 @@
     <!-- FAQ (Perguntas Frequentes) -->
     <section id="faq" class="py-16 bg-white relative z-10 overflow-hidden">
         <!-- Patinhas de Fundo (Blue Paws - Esquerda) -->
-        <svg class="absolute left-1 md:-left-4 top-[20%] w-7 h-7 pointer-events-none z-0 text-primary opacity-[0.08]" style="transform: rotate(20deg);"><use href="#paw-icon"></use></svg>
-        <svg class="absolute left-6 md:left-2 top-[50%] w-7 h-7 pointer-events-none z-0 text-primary opacity-[0.08]" style="transform: rotate(35deg);"><use href="#paw-icon"></use></svg>
-        <svg class="absolute left-2 md:-left-2 top-[80%] w-7 h-7 pointer-events-none z-0 text-primary opacity-[0.08]" style="transform: rotate(15deg);"><use href="#paw-icon"></use></svg>
+        <svg class="absolute left-1 md:-left-4 top-[20%] w-7 h-7 pointer-events-none z-0 text-primary opacity-[0.16]" style="transform: rotate(20deg);"><use href="#paw-icon"></use></svg>
+        <svg class="absolute left-6 md:left-2 top-[50%] w-7 h-7 pointer-events-none z-0 text-primary opacity-[0.16]" style="transform: rotate(35deg);"><use href="#paw-icon"></use></svg>
+        <svg class="absolute left-2 md:-left-2 top-[80%] w-7 h-7 pointer-events-none z-0 text-primary opacity-[0.16]" style="transform: rotate(15deg);"><use href="#paw-icon"></use></svg>
         
         <div class="container max-w-3xl mx-auto px-4 lg:px-8 relative z-10 flex flex-col items-center">
             <!-- Pre-headline Tag igual a da Sessao 1 -->
@@ -802,12 +810,12 @@
     <!-- Contato (Fale Conosco) -->
     <section id="contato" class="py-16 relative z-10 overflow-hidden bg-secondary">
         <!-- Patinhas de Fundo (White Paws) -->
-        <svg class="absolute left-1 md:-left-4 top-[15%] w-7 h-7 pointer-events-none z-0 text-white opacity-[0.08]" style="transform: rotate(20deg);"><use href="#paw-icon"></use></svg>
-        <svg class="absolute left-6 md:left-2 top-[45%] w-7 h-7 pointer-events-none z-0 text-white opacity-[0.08]" style="transform: rotate(35deg);"><use href="#paw-icon"></use></svg>
-        <svg class="absolute left-2 md:-left-2 top-[75%] w-7 h-7 pointer-events-none z-0 text-white opacity-[0.08]" style="transform: rotate(15deg);"><use href="#paw-icon"></use></svg>
-        <svg class="absolute right-1 md:-right-4 top-[30%] w-7 h-7 pointer-events-none z-0 text-white opacity-[0.08]" style="transform: rotate(-20deg);"><use href="#paw-icon"></use></svg>
-        <svg class="absolute right-6 md:right-2 top-[55%] w-7 h-7 pointer-events-none z-0 text-white opacity-[0.08]" style="transform: rotate(-35deg);"><use href="#paw-icon"></use></svg>
-        <svg class="absolute right-2 md:-right-2 top-[80%] w-7 h-7 pointer-events-none z-0 text-white opacity-[0.08]" style="transform: rotate(-15deg);"><use href="#paw-icon"></use></svg>
+        <svg class="absolute left-1 md:-left-4 top-[15%] w-7 h-7 pointer-events-none z-0 text-white opacity-[0.12]" style="transform: rotate(20deg);"><use href="#paw-icon"></use></svg>
+        <svg class="absolute left-6 md:left-2 top-[45%] w-7 h-7 pointer-events-none z-0 text-white opacity-[0.12]" style="transform: rotate(35deg);"><use href="#paw-icon"></use></svg>
+        <svg class="absolute left-2 md:-left-2 top-[75%] w-7 h-7 pointer-events-none z-0 text-white opacity-[0.12]" style="transform: rotate(15deg);"><use href="#paw-icon"></use></svg>
+        <svg class="absolute right-1 md:-right-4 top-[30%] w-7 h-7 pointer-events-none z-0 text-white opacity-[0.12]" style="transform: rotate(-20deg);"><use href="#paw-icon"></use></svg>
+        <svg class="absolute right-6 md:right-2 top-[55%] w-7 h-7 pointer-events-none z-0 text-white opacity-[0.12]" style="transform: rotate(-35deg);"><use href="#paw-icon"></use></svg>
+        <svg class="absolute right-2 md:-right-2 top-[80%] w-7 h-7 pointer-events-none z-0 text-white opacity-[0.12]" style="transform: rotate(-15deg);"><use href="#paw-icon"></use></svg>
         <!-- Luz da Esquerda para a Direita -->
         <div class="absolute inset-0 bg-gradient-to-r from-primary/20 via-primary/5 to-transparent pointer-events-none z-0"></div>
         
