@@ -425,16 +425,17 @@ button {
 .hero-image-wrapper {
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
 .hero-main-image {
     width: 100%;
-    max-width: 450px;
+    max-width: 385px;
     height: auto;
     position: relative;
     z-index: 2;
+    margin-left: -35px;
     mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
     -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
 }
@@ -1087,7 +1088,12 @@ button {
     }
     
     .hero-main-image {
-        max-width: 380px;
+        max-width: 340px;
+        margin-left: 0;
+    }
+    
+    .hero-image-wrapper {
+        justify-content: center;
     }
     
     .progress-card {
