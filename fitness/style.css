@@ -2658,7 +2658,8 @@ button {
     .coach-card-img {
         height: 420px;
     }
-}
+/* Coach widgets grid */
+
 
 /* ==========================================
    Comprehensive Mobile Optimizations
@@ -2697,202 +2698,35 @@ button {
     .faq-title {
         font-size: 2.2rem !important;
     }
-}
 
-@media (max-width: 480px) {
-    /* Hero Typography */
-    .hero-title {
-        font-size: 2.8rem !important;
-    }
-    
-    .hero-subtitle {
-        font-size: 1rem !important;
-    }
-    
-    /* Further padding reduction for very small screens */
-    .path-section,
-    z-index: 0;
-    pointer-events: none;
-}
-
-.coach-ai-arrow-btn {
-    align-self: flex-start;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
-    background-color: var(--lime);
-    color: #000000;
-    transition: all 0.3s ease;
-    margin-top: 16px;
-}
-
-.coach-ai-arrow-btn:hover {
-    transform: translateY(-2px);
-    background-color: var(--lime-hover);
-}
-
-/* Training Widget */
-.coach-progress-card {
-    background: #ffffff;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    border-radius: 20px;
-    padding: 24px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.01);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.coach-progress-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 12px;
-}
-
-.coach-progress-title-row {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.coach-progress-bullet {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background-color: var(--teal);
-    display: inline-block;
-}
-
-.coach-progress-title {
-    font-family: var(--font-heading);
-    font-weight: 800;
-    font-size: 1.2rem;
-    color: var(--text-dark);
-    text-transform: none;
-}
-
-.coach-progress-kcal {
-    font-size: 0.8rem;
-    font-weight: 700;
-    color: var(--white);
-    background-color: var(--text-dark);
-    padding: 4px 10px;
-    border-radius: 9999px;
-}
-
-.coach-progress-subtitle {
-    font-family: var(--font-body);
-    font-size: 0.75rem;
-    color: var(--text-muted);
-    margin-bottom: 20px;
-    line-height: 1.4;
-}
-
-.coach-progress-stats-row {
-    display: flex;
-    justify-content: space-between;
-    border-top: 1px solid #f1f5f9;
-    padding-top: 16px;
-}
-
-.coach-progress-stat {
-    display: flex;
-    flex-direction: column;
-}
-
-.coach-progress-val {
-    font-family: var(--font-heading);
-    font-weight: 850;
-    font-size: 1.2rem;
-    color: var(--text-dark);
-    line-height: 1;
-}
-
-.coach-progress-lbl {
-    font-family: var(--font-body);
-    font-size: 0.65rem;
-    color: var(--text-muted);
-    font-weight: 500;
-}
-
-
-
-
-
-/* ==========================================
-   Responsive Breakpoints for Coach Section
-   ========================================== */
-@media (max-width: 992px) {
-    .coach-layout {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-    
-    .coach-title {
-        font-size: 2.6rem;
-    }
-}
-
-@media (max-width: 640px) {
-    .coach-section {
-        padding: 60px 0;
-    }
-    
-    .coach-bottom-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .coach-title {
-        font-size: 2.2rem;
-    }
-    
-    .coach-card-img {
-        height: 420px;
-    }
-}
-
-/* ==========================================
-   Comprehensive Mobile Optimizations
-   ========================================== */
-@media (max-width: 768px) {
-    /* Reduce excess padding on sections */
-    .path-section,
-    .testimonials-section,
-    .faq-section {
-        padding: 60px 16px !important;
-    }
-    
-    .pricing-section {
-        padding: 60px 0 !important;
+    /* Safe container boundaries for mobile */
+    .header-container, .hero-container, .programs-container, .path-container, 
+    .video-container, .coach-container, .testimonials-container, .pricing-container, 
+    .faq-container, .footer-container {
+        width: 90% !important;
+        max-width: 90% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        box-sizing: border-box !important;
+        float: none !important;
     }
 
-    /* Scale down organic blobs for mobile */
-    .organic-blob {
-        width: 800px !important;
-        height: 800px !important;
-        filter: blur(60px) !important;
-        -webkit-filter: blur(60px) !important;
-    }
-    
-    .blob-right {
-        left: 90%;
-    }
-    
-    .blob-left {
-        left: 10%;
+    /* Force clipping on all main sections containing blobs to prevent horizontal overflow */
+    .hero, .path-section, .coach-section, .testimonials-section, .faq-section, .pricing-section, .footer {
+        overflow: hidden !important;
+        position: relative !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
 
-    /* Improve typography scaling */
-    .path-title,
-    .testimonials-main-title,
-    .faq-title {
-        font-size: 2.2rem !important;
+    /* Hero section heights & paddings */
+    .hero {
+        padding-top: 100px !important;
+        padding-bottom: 40px !important;
     }
-    
+
     /* Center logo on mobile */
     .header .logo {
         position: absolute;
@@ -2900,54 +2734,176 @@ button {
         transform: translateX(-50%);
     }
 
-    /* Hero Image Overlap on Mobile */
+    /* Move results container into flow below hero container */
+    .results-container {
+        position: relative !important;
+        bottom: auto !important;
+        left: auto !important;
+        right: auto !important;
+        transform: none !important;
+        width: 90% !important;
+        max-width: 480px !important;
+        margin: 40px auto 0 auto !important;
+        padding: 32px 20px !important;
+        box-sizing: border-box !important;
+        z-index: 10 !important;
+        border-radius: 24px !important;
+        background-color: var(--dark-card) !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 24px !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    .results-heading-col {
+        padding-left: 0 !important;
+        text-align: center !important;
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .results-title {
+        text-align: center !important;
+        font-size: 1.8rem !important;
+        line-height: 1.2 !important;
+        margin-bottom: 8px !important;
+    }
+
+    .results-stats-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px 12px !important;
+        width: 100% !important;
+        margin: 0 auto !important;
+    }
+
+    .stat-col {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    .stat-number {
+        font-size: 1.8rem !important;
+    }
+
+    .stat-label {
+        font-size: 0.75rem !important;
+    }
+
+    /* Path section top padding adjustment since results is relative */
+    .path-section {
+        padding-top: 60px !important;
+        padding-bottom: 60px !important;
+    }
+
+    /* Hero elements positioning & alignment */
+    .hero-container {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 30px !important;
+        width: 90% !important;
+        margin: 0 auto !important;
+    }
+
+    .hero-content {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        width: 100% !important;
+    }
+
+    .hero-title {
+        font-size: 2.8rem !important;
+        text-align: center !important;
+        line-height: 1.15 !important;
+        width: 100% !important;
+        margin-bottom: 16px !important;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem !important;
+        text-align: center !important;
+        line-height: 1.4 !important;
+        width: 100% !important;
+        margin-bottom: 24px !important;
+    }
+
+    .hero-cta-wrapper {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        margin-bottom: 24px !important;
+    }
+
+    .btn-trial {
+        width: 100% !important;
+        max-width: 280px !important;
+        justify-content: center !important;
+        padding: 12px 12px 12px 28px !important;
+        font-size: 1.1rem !important;
+    }
+
+    .hero-social-proof {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 12px !important;
+        width: 100% !important;
+    }
+
+    .hero-image-wrapper {
+        position: relative !important;
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin-top: 10px !important;
+    }
+
     .hero-main-image {
         max-width: 260px !important;
-        margin-top: -50px !important;
-        margin-bottom: -10px !important;
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 auto !important;
         z-index: 5 !important;
         position: relative !important;
     }
 
-    /* Move results container further down */
-    .results-container {
-        bottom: -20px !important;
-        width: 90% !important;
-        left: 5% !important;
-        right: 5% !important;
-        transform: none !important;
-        padding: 40px 20px !important;
-    }
-    
-    .path-section {
-        padding-top: 100px !important; /* Make room for the pushed down results container */
-    }
-
-    /* Progress Card overlapping waist, smaller, no list */
+    /* Progress card styles inside hero wrapper */
     .progress-card {
         position: absolute !important;
         left: auto !important;
-        right: 10px !important;
-        bottom: 90px !important;
+        right: 5% !important;
+        bottom: 40px !important;
         width: auto !important;
-        min-width: 140px;
+        min-width: 130px !important;
         padding: 8px 12px !important;
-        margin-top: 0 !important;
         z-index: 10 !important;
+        display: flex !important;
         flex-direction: row-reverse !important;
         align-items: center !important;
         justify-content: flex-end !important;
-        gap: 10px !important;
+        gap: 8px !important;
         border-radius: 10px !important;
-        background: rgba(0, 0, 0, 0.5) !important;
-        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        background: rgba(0, 0, 0, 0.6) !important;
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
+        backdrop-filter: blur(8px) !important;
+        -webkit-backdrop-filter: blur(8px) !important;
     }
 
     .progress-card-title {
         margin-bottom: 0 !important;
-        font-size: 0.8rem !important;
-        text-align: right;
-        line-height: 1.2;
+        font-size: 0.75rem !important;
+        text-align: right !important;
+        line-height: 1.2 !important;
         color: #ffffff !important;
         font-weight: 700 !important;
     }
@@ -2957,62 +2913,66 @@ button {
     }
 
     .progress-svg {
-        width: 36px !important;
-        height: 36px !important;
+        width: 32px !important;
+        height: 32px !important;
     }
-    
-    .progress-circle-bg, .progress-circle-fill {
-        stroke-width: 12 !important;
-    }
-    
+
     .progress-percentage {
-        font-size: 0.7rem !important;
+        font-size: 0.65rem !important;
         color: #ffffff !important;
         font-weight: 700 !important;
     }
-    
-    .progress-label {
-        display: none !important; /* Hide "Concluído" text inside circle to save space */
+
+    .progress-label, .progress-list {
+        display: none !important;
     }
 
-    .progress-card .progress-list {
-        display: none !important;
+    /* Testimonials Mobile alignment improvements */
+    .testimonial-new-image {
+        min-height: 250px !important;
+        background-size: cover !important;
+        background-position: center top !important;
+        border-radius: 24px 24px 0 0 !important;
+        margin-bottom: -5px !important;
+    }
+
+    .testimonial-new-content {
+        padding: 20px 20px 24px 20px !important;
+    }
+
+    .testimonial-new-header {
+        margin-bottom: 12px !important;
     }
 }
 
 @media (max-width: 480px) {
-    /* Hero Typography */
+    /* Extra typography & elements scaling for small viewports */
     .hero-title {
-        font-size: 2.8rem !important;
+        font-size: 2.2rem !important;
     }
     
     .hero-subtitle {
-        font-size: 1rem !important;
+        font-size: 0.95rem !important;
     }
     
-    /* Further padding reduction for very small screens */
+    .hero-main-image {
+        max-width: 220px !important;
+    }
+
+    .progress-card {
+        right: 2% !important;
+        bottom: 20px !important;
+    }
+
     .path-section,
     .testimonials-section,
     .faq-section {
         padding: 40px 16px !important;
     }
 
-    /* Hero Button */
-    .hero-cta-wrapper {
-        display: flex;
-        justify-content: flex-start;
-    }
-    
-    .btn-trial {
-        padding: 12px 12px 12px 28px !important;
-        font-size: 1.1rem !important;
-        width: auto !important;
-    }
-
-    /* Full width buttons */
     .btn-journey {
-        width: 100%;
-        justify-content: center;
+        width: 100% !important;
+        justify-content: center !important;
     }
 }
 
