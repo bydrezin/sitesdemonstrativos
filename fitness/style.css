@@ -1642,6 +1642,11 @@ button {
 
 /* Mobile Devices */
 @media (max-width: 768px) {
+    html, body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+    }
+    
     /* Centralize containers instead of entire sections to preserve full-width backgrounds */
     .header-container, .hero-container, .programs-container, .path-container, 
     .video-container, .coach-container, .testimonials-container, .pricing-container, 
@@ -1663,9 +1668,14 @@ button {
     }
 
     /* Uniform padding for balanced flow */
-    .hero, .coach-section, .pricing-section, .testimonials-section, .faq-section {
+    .coach-section, .pricing-section, .testimonials-section, .faq-section {
         padding-top: 60px !important;
         padding-bottom: 60px !important;
+    }
+
+    .hero {
+        padding-top: 60px !important;
+        padding-bottom: 250px !important;
     }
     
     /* Global Mobile Typography & Alignment adjustments */
@@ -2901,7 +2911,7 @@ button {
 
     /* Move results container further down */
     .results-container {
-        bottom: -180px !important;
+        bottom: -20px !important;
         width: 90% !important;
         left: 5% !important;
         right: 5% !important;
@@ -2910,7 +2920,7 @@ button {
     }
     
     .path-section {
-        padding-top: 200px !important; /* Make room for the pushed down results container */
+        padding-top: 100px !important; /* Make room for the pushed down results container */
     }
 
     /* Progress Card overlapping waist, smaller, no list */
