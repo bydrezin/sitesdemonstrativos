@@ -2369,9 +2369,13 @@ button {
     
     .testimonial-new-image {
         margin: 0;
-        min-height: 280px;
+        min-height: 420px;
         border-radius: 24px 24px 0 0;
         background-position: center 10%;
+    }
+    
+    .radial-blend {
+        display: none !important;
     }
     
     .testimonial-new-content {
@@ -3072,11 +3076,15 @@ button {
 
     /* Testimonials Mobile alignment improvements */
     .testimonial-new-image {
-        min-height: 250px !important;
+        min-height: 420px !important;
         background-size: cover !important;
         background-position: center top !important;
         border-radius: 24px 24px 0 0 !important;
         margin-bottom: -5px !important;
+    }
+    
+    .radial-blend {
+        display: none !important;
     }
 
     .testimonial-new-content {
