@@ -2835,7 +2835,9 @@ button {
         left: 10%;
     }
 
-    /* Improve typography scaling */
+    /* Improve typography scaling and prevent word-breaking */
+    h1, h2, h3, h4, h5, h6,
+    .hero-title,
     .path-title,
     .testimonials-main-title,
     .faq-title,
@@ -2843,7 +2845,12 @@ button {
     .pricing-title,
     .coach-title,
     .footer-cta-title {
-        font-size: 2.2rem !important;
+        font-size: clamp(1.8rem, 6vw, 2.2rem) !important;
+        line-height: 1.2 !important;
+        word-break: normal !important;
+        overflow-wrap: break-word !important;
+        hyphens: none !important;
+        -webkit-hyphens: none !important;
     }
 
     /* Safe container boundaries for mobile */
@@ -2966,11 +2973,15 @@ button {
     }
 
     .hero-title {
-        font-size: 2.8rem !important;
+        font-size: clamp(2rem, 7vw, 2.8rem) !important;
         text-align: center !important;
         line-height: 1.15 !important;
         width: 100% !important;
         margin-bottom: 16px !important;
+        word-break: normal !important;
+        overflow-wrap: break-word !important;
+        hyphens: none !important;
+        -webkit-hyphens: none !important;
     }
 
     .hero-subtitle {
@@ -3102,7 +3113,11 @@ button {
 @media (max-width: 480px) {
     /* Extra typography & elements scaling for small viewports */
     .hero-title {
-        font-size: 2.2rem !important;
+        font-size: clamp(1.8rem, 8vw, 2.2rem) !important;
+        word-break: normal !important;
+        overflow-wrap: break-word !important;
+        hyphens: none !important;
+        -webkit-hyphens: none !important;
     }
     
     .hero-subtitle {
