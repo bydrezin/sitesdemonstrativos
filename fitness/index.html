@@ -6,8 +6,13 @@
     <title>Creativzlab® | Demonstração Fitness</title>
     <link rel="icon" type="image/webp" href="https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779739308/Icon-Creativzlab-_For-DarkBG__1_zsvjqh.webp">
     <meta name="description" content="Treino personalizado. Nutrição mais inteligente. Resultados reais que duram. Junte-se à Vitalyze para começar sua jornada hoje.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,slnt,wdth,wght,ROND@8..144,-10..0,25..150,300..600,0..100&display=swap" rel="stylesheet">
+    
     <!-- CSS File -->
-    <link rel="stylesheet" href="./style.css?v=2026.05.27.v3">
+    <link rel="stylesheet" href="./style.css?v=2026.05.27.v4">
 </head>
 <body>
 
@@ -30,14 +35,6 @@
             </nav>
             
             <div class="header-actions">
-                <a href="https://wa.me/558195795962?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20planos%20personalizados%20do%20Vitalyze." target="_blank" class="btn-journey" id="btn-header-journey" style="padding: 6px 6px 6px 20px; font-size: 0.9rem; gap: 12px; box-shadow: none;">
-                    <span>Fale no WhatsApp</span>
-                    <span class="wpp-circle" style="width: 32px; height: 32px;">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
-                        </svg>
-                    </span>
-                </a>
                 <button class="mobile-menu-toggle" id="menu-toggle" aria-label="Alternar Menu">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="4" y1="12" x2="20" y2="12"></line>
@@ -87,29 +84,31 @@
                     Resultados reais que duram.
                 </p>
                 
-                <div class="hero-cta-wrapper">
-                    <a href="#pricing" class="btn-trial" id="btn-hero-plans" style="padding: 6px 6px 6px 20px; font-size: 0.9rem;">
-                        <span>Ver Planos</span>
-                        <span class="btn-trial-circle" style="width: 32px; height: 32px;">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                <polyline points="12 5 19 12 12 19"></polyline>
-                            </svg>
-                        </span>
-                    </a>
-                </div>
-                
-                <div class="hero-social-proof">
-                    <div class="avatar-stack">
-                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&h=100&q=80" alt="Membro 1" class="avatar-img">
-                        <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=100&h=100&q=80" alt="Membro 2" class="avatar-img">
-                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&h=100&q=80" alt="Membro 3" class="avatar-img">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100&q=80" alt="Membro 4" class="avatar-img">
+                <div class="hero-actions-container">
+                    <div class="hero-cta-wrapper">
+                        <a href="#pricing" class="btn-trial" id="btn-hero-plans">
+                            <span>Ver Planos</span>
+                            <span class="btn-trial-circle">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </span>
+                        </a>
                     </div>
-                    <p class="social-proof-text">
-                        Junte-se a <strong>+100 alunos</strong><br>
-                        transformando suas vidas
-                    </p>
+                    
+                    <div class="hero-social-proof">
+                        <div class="avatar-stack">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&h=100&q=80" alt="Membro 1" class="avatar-img">
+                            <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=100&h=100&q=80" alt="Membro 2" class="avatar-img">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&h=100&q=80" alt="Membro 3" class="avatar-img">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100&q=80" alt="Membro 4" class="avatar-img">
+                        </div>
+                        <p class="social-proof-text">
+                            Junte-se a <strong>+100 alunos</strong><br>
+                            transformando suas vidas
+                        </p>
+                    </div>
                 </div>
             </div>
             
@@ -475,7 +474,6 @@
                     <div class="pricing-toggle">
                         <button class="toggle-btn active" data-period="mensal">Mensal</button>
                         <button class="toggle-btn" data-period="trimestral">Trimestral</button>
-                        <button class="toggle-btn" data-period="semestral">Semestral</button>
                         <div class="toggle-pill"></div>
                     </div>
                 </div>
@@ -483,79 +481,75 @@
                 <div class="pricing-grid">
                     <!-- Card 1: Bronze -->
                     <div class="pricing-card">
-                        <div class="card-icon-wrapper">
-                            <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                        </div>
+                        <p class="card-desc">Para iniciantes que querem sair do sedentarismo</p>
                         <h3 class="card-title">Bronze</h3>
+                        
                         <div class="card-price-container">
                             <span class="price-currency">R$</span>
-                            <span class="price-value" data-mensal="250,00" data-trimestral="599,00" data-semestral="999,00">250,00</span>
+                            <span class="price-value" data-mensal="250,00" data-trimestral="599,00">250,00</span>
+                            <span class="price-period" data-mensal="/mês" data-trimestral="/tri">/mês</span>
                         </div>
-                        <p class="price-period" data-mensal="por mês" data-trimestral="por trimestre" data-semestral="por semestre">por mês</p>
-                        <p class="card-desc">Para iniciantes que querem sair do sedentarismo</p>
+                        <p class="card-discount">20% de economia (era R$ 320)</p>
+                        
+                        <button class="btn-select-plan">Começar agora</button>
+                        
+                        <hr class="card-divider">
                         
                         <ul class="card-features">
-                            <li>
-                                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                                <span>2 treinos por semana (8 no mês)</span>
-                            </li>
-                            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> <span>Planilha de treinos personalizada</span></li>
-                            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> <span>Suporte via WhatsApp</span></li>
-                            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> <span>Orientações sobre execução</span></li>
+                            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="9 12 11 14 15 10"></polyline></svg> <span>2 treinos por semana (8 no mês)</span></li>
+                            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="9 12 11 14 15 10"></polyline></svg> <span>Planilha de treinos personalizada</span></li>
+                            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="9 12 11 14 15 10"></polyline></svg> <span>Suporte via WhatsApp</span></li>
+                            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="9 12 11 14 15 10"></polyline></svg> <span>Orientações sobre execução</span></li>
                         </ul>
-                        <button class="btn-select-plan">Quero esse plano!</button>
                     </div>
 
                     <!-- Card 2: Prata -->
                     <div class="pricing-card pricing-card-highlight">
-                        <div class="testimonial-decoration"></div>
-                        <div class="card-badge">Mais popular</div>
-                        <div class="card-icon-wrapper highlight-icon">
-                            <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-                        </div>
+                        <div class="card-popular-badge">POPULAR</div>
+                        <p class="card-desc">Para quem já treina e quer evoluir em performance</p>
                         <h3 class="card-title">Prata</h3>
+                        
                         <div class="card-price-container">
                             <span class="price-currency">R$</span>
-                            <span class="price-value" data-mensal="350,00" data-trimestral="899,00" data-semestral="1.599,00">350,00</span>
+                            <span class="price-value" data-mensal="350,00" data-trimestral="899,00">350,00</span>
+                            <span class="price-period" data-mensal="/mês" data-trimestral="/tri">/mês</span>
                         </div>
-                        <p class="price-period" data-mensal="por mês" data-trimestral="por trimestre" data-semestral="por semestre">por mês</p>
-                        <p class="card-desc">Para quem já treina e quer evoluir em performance</p>
+                        <p class="card-discount">20% de economia (era R$ 450)</p>
+                        
+                        <button class="btn-select-plan highlight-btn">Começar agora</button>
+                        
+                        <hr class="card-divider">
                         
                         <ul class="card-features">
-                            <li>
-                                <svg class="check-icon highlight-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                                <span>3 treinos por semana (12 no mês)</span>
-                            </li>
-                            <li><svg class="check-icon highlight-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> <span>Planilha de treinos personalizada</span></li>
-                            <li><svg class="check-icon highlight-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> <span>Suporte via WhatsApp</span></li>
-                            <li><svg class="check-icon highlight-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> <span>Orientações sobre execução</span></li>
+                            <li><svg class="check-icon highlight-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="9 12 11 14 15 10"></polyline></svg> <span>3 treinos por semana (12 no mês)</span></li>
+                            <li><svg class="check-icon highlight-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="9 12 11 14 15 10"></polyline></svg> <span>Planilha de treinos personalizada</span></li>
+                            <li><svg class="check-icon highlight-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="9 12 11 14 15 10"></polyline></svg> <span>Suporte via WhatsApp</span></li>
+                            <li><svg class="check-icon highlight-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="9 12 11 14 15 10"></polyline></svg> <span>Orientações sobre execução</span></li>
                         </ul>
-                        <button class="btn-select-plan highlight-btn">Quero esse plano!</button>
                     </div>
 
                     <!-- Card 3: Ouro -->
                     <div class="pricing-card">
-                        <div class="card-icon-wrapper">
-                            <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
-                        </div>
+                        <p class="card-desc">Para quem deseja priorizar a calistenia e performance</p>
                         <h3 class="card-title">Ouro</h3>
+                        
                         <div class="card-price-container">
                             <span class="price-currency">R$</span>
-                            <span class="price-value" data-mensal="550,00" data-trimestral="1.499,00" data-semestral="2.699,00">550,00</span>
+                            <span class="price-value" data-mensal="550,00" data-trimestral="1.499,00">550,00</span>
+                            <span class="price-period" data-mensal="/mês" data-trimestral="/tri">/mês</span>
                         </div>
-                        <p class="price-period" data-mensal="por mês" data-trimestral="por trimestre" data-semestral="por semestre">por mês</p>
-                        <p class="card-desc">Para quem deseja priorizar a calistenia e performance</p>
+                        <p class="card-discount">20% de economia (era R$ 690)</p>
+                        
+                        <button class="btn-select-plan">Começar agora</button>
+                        
+                        <hr class="card-divider">
                         
                         <ul class="card-features">
-                            <li>
-                                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                                <span>4 a 5 treinos por semana (até 20 no mês)</span>
-                            </li>
-                            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> <span>Planilha de treinos personalizada</span></li>
-                            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> <span>Suporte via WhatsApp</span></li>
-                            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> <span>Vídeos explicativos de cada movimento</span></li>
+                            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="9 12 11 14 15 10"></polyline></svg> <span>4 a 5 treinos por semana (até 20 no mês)</span></li>
+                            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="9 12 11 14 15 10"></polyline></svg> <span>Planilha de treinos personalizada</span></li>
+                            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="9 12 11 14 15 10"></polyline></svg> <span>Suporte via WhatsApp</span></li>
+                            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="9 12 11 14 15 10"></polyline></svg> <span>Vídeos explicativos de cada movimento</span></li>
                         </ul>
-                        <button class="btn-select-plan">Quero esse plano!</button>
                     </div>
                 </div>
             </div>
@@ -1068,8 +1062,51 @@
         });
     </script>
     
-    <!-- Floating WhatsApp Button (Mobile Only) -->
-    <a href="https://wa.me/558195795962?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20planos%20personalizados%20do%20Vitalyze." target="_blank" class="floating-whatsapp">
+    <style>
+        #wpp-fix {
+            display: flex !important;
+            position: fixed !important;
+            bottom: 40px !important;
+            right: 40px !important;
+            width: 60px !important;
+            height: 60px !important;
+            background-color: #25D366 !important;
+            color: white !important;
+            border-radius: 50% !important;
+            align-items: center !important;
+            justify-content: center !important;
+            z-index: 999999 !important;
+            box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4) !important;
+            transition: transform 0.3s ease !important;
+        }
+        #wpp-fix:hover {
+            transform: scale(1.05) !important;
+        }
+        #wpp-fix::before {
+            content: '' !important;
+            position: absolute !important;
+            width: 100% !important;
+            height: 100% !important;
+            background-color: #25D366 !important;
+            border-radius: 50% !important;
+            z-index: -1 !important;
+            animation: wpp-pulse-fix 2s infinite !important;
+        }
+        @keyframes wpp-pulse-fix {
+            0% { transform: scale(1); opacity: 0.8; }
+            100% { transform: scale(1.6); opacity: 0; }
+        }
+        @media (max-width: 768px) {
+            #wpp-fix {
+                bottom: 24px !important;
+                right: 24px !important;
+                width: 56px !important;
+                height: 56px !important;
+            }
+        }
+    </style>
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/558195795962?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20planos%20personalizados%20do%20Vitalyze." target="_blank" id="wpp-fix">
         <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
         </svg>
