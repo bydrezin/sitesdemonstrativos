@@ -1,7 +1,7 @@
 {
-  "name": "creativzpet",
+  "name": "creativzlab-fitness",
   "version": "1.0.0",
-  "description": "Landing Page para a clínica veterinária e pet shop CreativzPet",
+  "description": "Landing Page Premium de Fitness - Creativzlab®",
   "scripts": {
     "start": "http-server -p 3000",
     "dev": "live-server --port=3000"
