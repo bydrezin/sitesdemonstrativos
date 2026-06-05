@@ -3006,12 +3006,12 @@ button {
         width: 100% !important;
         display: flex !important;
         justify-content: center !important;
-        align-items: center !important;
-        margin-top: -20px !important;
+        align-items: flex-start !important;
+        margin-top: -25px !important;
     }
 
     .hero-main-image {
-        max-width: 380px !important;
+        max-width: 290px !important;
         width: 100% !important;
         height: auto !important;
         margin: 0 auto !important;
@@ -3102,8 +3102,12 @@ button {
         font-size: 0.95rem !important;
     }
     
+    .hero-image-wrapper {
+        margin-top: -30px !important;
+    }
+
     .hero-main-image {
-        max-width: 340px !important;
+        max-width: 260px !important;
     }
 
     .progress-card {
