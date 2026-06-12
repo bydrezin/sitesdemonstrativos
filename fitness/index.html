@@ -79,8 +79,8 @@
             <nav class="nav" id="main-nav">
                 <ul class="nav-list">
                     <li class="nav-item"><a href="#hero" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="#programs" class="nav-link">Consultoria</a></li>
                     <li class="nav-item"><a href="#coach" class="nav-link">Sobre</a></li>
+                    <li class="nav-item"><a href="#programs" class="nav-link">Consultoria</a></li>
                     <li class="nav-item"><a href="#testimonials" class="nav-link">Depoimentos</a></li>
                     <li class="nav-item"><a href="#pricing" class="nav-link">Planos</a></li>
                     <li class="nav-item"><a href="#faq" class="nav-link">FAQ</a></li>
@@ -103,8 +103,8 @@
     <div class="mobile-nav-drawer" id="mobile-drawer">
         <ul class="mobile-nav-list">
             <li><a href="#hero" class="mobile-nav-link">Home</a></li>
-            <li><a href="#programs" class="mobile-nav-link">Consultoria</a></li>
             <li><a href="#coach" class="mobile-nav-link">Sobre</a></li>
+            <li><a href="#programs" class="mobile-nav-link">Consultoria</a></li>
             <li><a href="#testimonials" class="mobile-nav-link">Depoimentos</a></li>
             <li><a href="#pricing" class="mobile-nav-link">Planos</a></li>
             <li><a href="#faq" class="mobile-nav-link">FAQ</a></li>
@@ -243,62 +243,78 @@
         </div>
         
         <!-- Bloco de Resultados no lugar de Nossa Abordagem (Hero) -->
-        <div class="results-container" id="success">
-            <div class="results-heading-col">
-                <h2 class="results-title">Resultados que<br>falam por si só</h2>
-                <div class="squiggly-line">
-                    <svg width="60" height="12" viewBox="0 0 60 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2 10C8 6 12 2 18 2C24 2 28 8 34 8C40 8 44 2 50 2C54 2 56.5 5 58 7" stroke="var(--teal)" stroke-width="3" stroke-linecap="round"/>
-                    </svg>
-                </div>
+        <div class="results-container promo-container" id="promo-dupla">
+            <div class="promo-content-col">
+                <h2 class="promo-title">Seleção <span class="text-gradient">Convocação Dupla!</span></h2>
+                <p class="promo-subtitle">Convoque um amigo para treinar com você. Se ele fechar qualquer plano, vocês dois ganham 20% de desconto na mensalidade (Promoção válida até o fim da Copa).</p>
+                <a href="#programs" class="btn-trial promo-cta">
+                    <span>Escalar Minha Dupla!</span>
+                    <span class="btn-trial-circle">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </span>
+                </a>
             </div>
             
-            <div class="results-stats-grid">
-                <!-- Stat 1 -->
-                <div class="stat-col">
-                    <span class="stat-icon-circle">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="12" cy="7" r="4"></circle>
-                        </svg>
-                    </span>
-                    <span class="stat-number">+<span class="result-counter" data-target="100">0</span></span>
-                    <span class="stat-label">Alunos Felizes</span>
+            <div class="promo-image-col">
+                <div class="promo-image-wrapper">
+                    <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1781284416/Sele%C3%A7%C3%A3o_De_Ofertas_scz8f6.webp" alt="Seleção de Ofertas">
+                    <div class="promo-image-overlay">
+                        <p class="promo-overlay-text">Nenhum craque joga sozinho!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coach Section -->
+    <section class="coach-section" id="coach">
+        <div class="organic-blob blob-right blob-weak" style="top: 30%"></div>
+        <div class="coach-container">
+            <div class="coach-layout">
+                <!-- Left Column (Alex Simon Card) -->
+                <div class="coach-left-col">
+                    <div class="coach-profile-card">
+                        <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779854489/Gemini_Generated_Image_gej3tlgej3tlgej3_epu3nt.webp" alt="[Seu Nome] Personal" class="coach-card-img" width="480" height="600" loading="lazy" decoding="async" fetchpriority="low">
+                        
+                        <div class="coach-play-btn-glass">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                        
+                        <div class="coach-cref-badge" style="position: absolute; top: 24px; right: 24px; z-index: 10; margin: 0;">CREF: 012345-G/PE</div>
+                        
+                        <div class="coach-card-info" style="bottom: 32px;">
+                            <h3 class="coach-card-name" style="font-size: 1.8rem;"><span class="text-gradient">[Seu Nome]</span> Personal</h3>
+                            <span class="coach-card-role">Treinadora de Fitness Certificada</span>
+                        </div>
+                    </div>
                 </div>
                 
-                <!-- Stat 2 -->
-                <div class="stat-col">
-                    <span class="stat-icon-circle">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                        </svg>
-                    </span>
-                    <span class="stat-number"><span class="result-counter" data-target="98">0</span>%</span>
-                    <span class="stat-label">Taxa de Sucesso</span>
-                </div>
-                
-                <!-- Stat 3 -->
-                <div class="stat-col">
-                    <span class="stat-icon-circle">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M6 12h12M6 8h12M6 16h12M3 12h2M19 12h2"></path>
-                            <rect x="5" y="6" width="2" height="12" rx="1"></rect>
-                            <rect x="17" y="6" width="2" height="12" rx="1"></rect>
-                        </svg>
-                    </span>
-                    <span class="stat-number"><span class="result-counter" data-target="25">0</span>M+</span>
-                    <span class="stat-label">Treinos Concluídos</span>
-                </div>
-                
-                <!-- Stat 4 -->
-                <div class="stat-col">
-                    <span class="stat-icon-circle">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                        </svg>
-                    </span>
-                    <span class="stat-number"><span class="result-counter" data-target="4.9" data-decimals="1">0.0</span>/5</span>
-                    <span class="stat-label">Avaliação no Google</span>
+                <!-- Right Column -->
+                <div class="coach-right-col" style="display: flex; flex-direction: column; justify-content: center;">
+                    <h2 class="coach-title">Sobre <span class="text-gradient">[Seu Nome]</span></h2>
+                    
+                    <div class="coach-desc-block">
+                        <p class="coach-desc">Sou <span class="text-gradient">[Seu Nome]</span>, e minha história começou com a obesidade. Passei por uma transformação profunda: emagreci quase 40 kg e ganhei mais de 20 kg de massa muscular. Essa mudança não foi apenas física — foi o que despertou em mim a paixão que se tornou minha profissão.</p>
+                        <p class="coach-desc" style="margin-top: 16px;">Há mais de 15 anos, trabalho ajudando pessoas a alcançarem seus melhores resultados, com acompanhamentos totalmente individualizados, baseados em ciência, prática e empatia.</p>
+                    </div>
+                    
+                    <!-- Bottom Grid -->
+                    <div class="coach-bottom-grid" style="grid-template-columns: 1fr; margin-top: 24px;">
+                        <!-- Single info card -->
+                        <div class="coach-ai-card coach-dark-card" style="display: flex; flex-direction: row; justify-content: flex-start; align-items: center; padding: 24px; background: #0b131a; border: none; gap: 24px; position: relative; overflow: hidden;">
+                            <div class="coach-stat-item" style="display: flex; flex-direction: row; align-items: center; gap: 12px; flex-shrink: 0; position: relative; z-index: 1;">
+                                <span class="coach-stat-value" style="color: #ffffff; font-size: 2.5rem; line-height: 1;"><span class="count-up-int" data-target="15">15</span>+</span>
+                                <span class="coach-stat-label" style="color: #94a3b8; text-align: left; max-width: 80px; line-height: 1.2;">Anos de Experiência</span>
+                            </div>
+                            <div class="coach-stat-divider" style="background: rgba(255, 255, 255, 0.15); width: 1px; height: 50px; flex-shrink: 0; position: relative; z-index: 1;"></div>
+                            <div class="coach-stat-text" style="color: #e2e8f0; font-size: 0.95rem; line-height: 1.5; text-align: left; position: relative; z-index: 1;">
+                                Atendo online e também presencialmente em Recife, PE. Sim, sou eu mesmo quem acompanha cada aluno. E posso dizer com toda certeza: eu amo o que faço.
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -358,59 +374,6 @@
         </div>
     </section>
 
-
-    <!-- Coach Section -->
-    <section class="coach-section" id="coach">
-        <div class="organic-blob blob-right blob-weak" style="top: 30%"></div>
-        <div class="coach-container">
-            <div class="coach-layout">
-                <!-- Left Column (Alex Simon Card) -->
-                <div class="coach-left-col">
-                    <div class="coach-profile-card">
-                        <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779854489/Gemini_Generated_Image_gej3tlgej3tlgej3_epu3nt.webp" alt="Luiza Personal Trainer" class="coach-card-img" width="480" height="600" loading="lazy" decoding="async" fetchpriority="low">
-                        
-                        <div class="coach-play-btn-glass">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                        </div>
-                        
-                        <div class="coach-cref-badge" style="position: absolute; top: 24px; right: 24px; z-index: 10; margin: 0;">CREF: 012345-G/PE</div>
-                        
-                        <div class="coach-card-info" style="bottom: 32px;">
-                            <h3 class="coach-card-name" style="font-size: 1.8rem;">Luiza Personal Trainer</h3>
-                            <span class="coach-card-role">Treinadora de Fitness Certificada</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Right Column -->
-                <div class="coach-right-col" style="display: flex; flex-direction: column; justify-content: center;">
-                    <h2 class="coach-title">Sobre a <span class="text-gradient">Luiza</span></h2>
-                    
-                    <div class="coach-desc-block">
-                        <p class="coach-desc">Sou a Luiza Trainer, e minha história começou com a obesidade. Passei por uma transformação profunda: emagreci quase 40 kg e ganhei mais de 20 kg de massa muscular. Essa mudança não foi apenas física — foi o que despertou em mim a paixão que se tornou minha profissão.</p>
-                        <p class="coach-desc" style="margin-top: 16px;">Há mais de 15 anos, trabalho ajudando pessoas a alcançarem seus melhores resultados, com acompanhamentos totalmente individualizados, baseados em ciência, prática e empatia.</p>
-                    </div>
-                    
-                    <!-- Bottom Grid -->
-                    <div class="coach-bottom-grid" style="grid-template-columns: 1fr; margin-top: 24px;">
-                        <!-- Single info card -->
-                        <div class="coach-ai-card coach-dark-card" style="display: flex; flex-direction: row; justify-content: flex-start; align-items: center; padding: 24px; background: #0b131a; border: none; gap: 24px; position: relative; overflow: hidden;">
-                            <div class="coach-stat-item" style="display: flex; flex-direction: row; align-items: center; gap: 12px; flex-shrink: 0; position: relative; z-index: 1;">
-                                <span class="coach-stat-value" style="color: #ffffff; font-size: 2.5rem; line-height: 1;"><span class="count-up-int" data-target="15">15</span>+</span>
-                                <span class="coach-stat-label" style="color: #94a3b8; text-align: left; max-width: 80px; line-height: 1.2;">Anos de Experiência</span>
-                            </div>
-                            <div class="coach-stat-divider" style="background: rgba(255, 255, 255, 0.15); width: 1px; height: 50px; flex-shrink: 0; position: relative; z-index: 1;"></div>
-                            <div class="coach-stat-text" style="color: #e2e8f0; font-size: 0.95rem; line-height: 1.5; text-align: left; position: relative; z-index: 1;">
-                                Atendo online e também presencialmente em Recife, PE. Sim, sou eu mesmo quem acompanha cada aluno. E posso dizer com toda certeza: eu amo o que faço.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
     <!-- Testimonials Section -->
     <section class="testimonials-section" id="testimonials">
         <div class="organic-blob blob-left blob-strong" style="top: 10%"></div>
@@ -443,8 +406,8 @@
                                 </div>
                                 <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779847651/google-icon-logo-svgrepo-com_xejhpl.svg" class="testimonial-new-google" alt="Google" width="24" height="24" loading="lazy" decoding="async" fetchpriority="low" style="margin-left: 0; width: 24px; height: 24px;">
                             </div>
-                            <p class="testimonial-new-text">"Caramba, o PT me transformou completamente! Eu era só pele e osso e agora tenho músculo de verdade. Ele me deu todo o suporte que eu precisava. Valeu muito a pena!"</p>
-                            <div class="testimonial-decoration"></div>
+                            <p class="testimonial-new-text">"Caramba, <span class="text-gradient">[Seu Nome]</span> me transformou completamente! Eu era só pele e osso e agora tenho músculo de verdade. Me deu todo o suporte que eu precisava. Valeu muito a pena!"</p>
+
                         </div>
                     </div>
                     
@@ -470,8 +433,8 @@
                                 </div>
                                 <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779847651/google-icon-logo-svgrepo-com_xejhpl.svg" class="testimonial-new-google" alt="Google" width="24" height="24" loading="lazy" decoding="async" fetchpriority="low" style="margin-left: 0; width: 24px; height: 24px;">
                             </div>
-                            <p class="testimonial-new-text">"Não tenho palavras para agradecer ao meu PT. Consegui definir meu abdômen e ganhar massa de forma saudável. Sinto-me muito mais forte e segura. Recomendo de olhos fechados!"</p>
-                            <div class="testimonial-decoration"></div>
+                            <p class="testimonial-new-text">"Não tenho palavras para agradecer à <span class="text-gradient">[Seu Nome]</span>. Consegui definir meu abdômen e ganhar massa de forma saudável. Sinto-me muito mais forte e segura. Recomendo de olhos fechados!"</p>
+
                         </div>
                     </div>
                     
@@ -498,7 +461,7 @@
                                 <img src="https://res.cloudinary.com/do789aovx/image/upload/q_auto/f_auto/v1779847651/google-icon-logo-svgrepo-com_xejhpl.svg" class="testimonial-new-google" alt="Google" width="24" height="24" loading="lazy" decoding="async" fetchpriority="low" style="margin-left: 0; width: 24px; height: 24px;">
                             </div>
                             <p class="testimonial-new-text">"Achava que depois dos 30 não dava mais, mas com o acompanhamento certo do personal, tudo mudou. Os treinos foram duros, mas o resultado fala por si só. Melhor investimento!"</p>
-                            <div class="testimonial-decoration"></div>
+
                         </div>
                     </div>
                 </div>
@@ -543,7 +506,15 @@
                         </div>
                         <p class="card-discount">20% de economia (era R$ 320)</p>
                         
-                        <button class="btn-select-plan">Começar agora</button>
+                        <a href="#" class="btn-trial btn-trial-plan">
+                            <span>Quero esse plano</span>
+                            <span class="btn-trial-circle">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </span>
+                        </a>
                         
                         <hr class="card-divider">
                         
@@ -567,7 +538,15 @@
                         </div>
                         <p class="card-discount">20% de economia (era R$ 450)</p>
                         
-                        <button class="btn-select-plan highlight-btn">Começar agora</button>
+                        <a href="#" class="btn-trial btn-trial-plan">
+                            <span>Quero esse plano</span>
+                            <span class="btn-trial-circle">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </span>
+                        </a>
                         
                         <hr class="card-divider">
                         
@@ -590,7 +569,15 @@
                         </div>
                         <p class="card-discount">20% de economia (era R$ 690)</p>
                         
-                        <button class="btn-select-plan">Começar agora</button>
+                        <a href="#" class="btn-trial btn-trial-plan">
+                            <span>Quero esse plano</span>
+                            <span class="btn-trial-circle">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </span>
+                        </a>
                         
                         <hr class="card-divider">
                         
@@ -628,7 +615,7 @@
                     </button>
                     <div class="faq-answer-panel">
                         <div class="faq-answer-content">
-                            <p>Após a confirmação do pagamento, você preencherá uma anamnese (questionário) completa. Com base nas suas respostas, a Luiza Personal Trainer montará 100% do seu treino e da sua dieta, totalmente personalizados para os seus objetivos, limitações e rotina.</p>
+                            <p>Após a confirmação do pagamento, você preencherá uma anamnese (questionário) completa. Com base nas suas respostas, <span class="text-gradient">[Seu Nome]</span> Personal montará 100% do seu treino e da sua dieta, totalmente personalizados para os seus objetivos, limitações e rotina.</p>
                         </div>
                     </div>
                 </div>
@@ -664,7 +651,7 @@
                     </button>
                     <div class="faq-answer-panel">
                         <div class="faq-answer-content">
-                            <p>Não! Tudo é feito de forma totalmente individualizada. A Luiza Personal Trainer vai avaliar seu nível de experiência, objetivo, restrições e até os alimentos da sua preferência para montar o seu planejamento.</p>
+                            <p>Não! Tudo é feito de forma totalmente individualizada. <span class="text-gradient">[Seu Nome]</span> Personal vai avaliar seu nível de experiência, objetivo, restrições e até os alimentos da sua preferência para montar o seu planejamento.</p>
                         </div>
                     </div>
                 </div>
@@ -682,7 +669,7 @@
                     </button>
                     <div class="faq-answer-panel">
                         <div class="faq-answer-content">
-                            <p>Você terá suporte total! Todas as suas dúvidas sobre o treino, execução dos exercícios, dieta e suplementação poderão ser tiradas diretamente com a Luiza Personal Trainer através da nossa plataforma exclusiva.</p>
+                            <p>Você terá suporte total! Todas as suas dúvidas sobre o treino, execução dos exercícios, dieta e suplementação poderão ser tiradas diretamente com <span class="text-gradient">[Seu Nome]</span> Personal através da nossa plataforma exclusiva.</p>
                         </div>
                     </div>
                 </div>
@@ -700,7 +687,7 @@
                     </button>
                     <div class="faq-answer-panel">
                         <div class="faq-answer-content">
-                            <p>Com certeza. Mesmo que você nunca tenha pisado em uma academia, o plano é para você. A Luiza Personal Trainer disponibiliza vídeos explicativos mostrando a execução correta de cada exercício prescrito no seu treino para que você tenha total segurança.</p>
+                            <p>Com certeza. Mesmo que você nunca tenha pisado em uma academia, o plano é para você. <span class="text-gradient">[Seu Nome]</span> Personal disponibiliza vídeos explicativos mostrando a execução correta de cada exercício prescrito no seu treino para que você tenha total segurança.</p>
                         </div>
                     </div>
                 </div>
@@ -754,7 +741,7 @@
                     </button>
                     <div class="faq-answer-panel">
                         <div class="faq-answer-content">
-                            <p>As atualizações de treino e dieta são feitas periodicamente de acordo com o plano contratado. A Luiza Personal Trainer fará os ajustes necessários conforme o seu corpo for evoluindo, garantindo que você não estagne nos resultados.</p>
+                            <p>As atualizações de treino e dieta são feitas periodicamente de acordo com o plano contratado. <span class="text-gradient">[Seu Nome]</span> Personal fará os ajustes necessários conforme o seu corpo for evoluindo, garantindo que você não estagne nos resultados.</p>
                         </div>
                     </div>
                 </div>
