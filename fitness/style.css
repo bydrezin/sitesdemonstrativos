@@ -3500,3 +3500,133 @@ button {
         overflow-wrap: normal !important;
     }
 }
+/* ==========================================
+   Biblioteca Premium Section
+   ========================================== */
+.premium-section {
+    padding: 100px 0;
+    position: relative;
+    background-color: var(--dark-bg);
+    color: var(--white);
+}
+
+.premium-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.premium-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.premium-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--white);
+}
+
+.premium-title-accent {
+    color: var(--teal);
+    background: linear-gradient(135deg, var(--teal) 0%, #70d6ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.premium-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-light-muted);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.premium-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.premium-card {
+    background: var(--dark-card);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.premium-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    border-color: rgba(0, 174, 239, 0.3);
+}
+
+.premium-card-image {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    margin-bottom: 24px;
+    object-fit: cover;
+}
+
+.premium-card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--white);
+}
+
+.premium-card-desc {
+    color: var(--text-light-muted);
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+    flex-grow: 1;
+}
+
+.premium-card-price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--lime);
+    margin-bottom: 24px;
+}
+
+.premium-card-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--teal);
+    color: var(--white);
+    padding: 14px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.premium-card-btn:hover {
+    background-color: var(--teal-hover);
+    transform: translateY(-2px);
+}
+
+.premium-footer-text {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .premium-grid {
+        grid-template-columns: 1fr;
+    }
+}
